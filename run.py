@@ -47,3 +47,9 @@ def game(word):
     letters_guessed = []
     words_guessed = []
     lives = 6
+    print("Time to start guessing!")
+    print(f'You have {lives} guesses remaining')
+    print(word_hint)
+    while not guessed_correct and lives > 0:
+        guess = input("Guess a letter or word: ").upper()
+        
