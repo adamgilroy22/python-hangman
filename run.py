@@ -1,4 +1,6 @@
-# imports
+"""
+Imports
+"""
 import random
 
 
@@ -42,14 +44,24 @@ def random_word():
 
 
 def game(word):
+    """
+    Play game.
+    """
     word_hint = "_" * len(word)
     guessed_correct = False
     letters_guessed = []
     words_guessed = []
     lives = 6
     print("Time to start guessing!")
-    print(f'You have {lives} guesses remaining')
     print(word_hint)
     while not guessed_correct and lives > 0:
+        print(f"You have {lives} guesses remaining")
         guess = input("Guess a letter or word: ").upper()
-        
+        if len(guess) == 1 and guess.isalpha():
+            if guess in letters_guessed:
+                print("You've already guessed that, try again")
+        elif len(guess) == len(word) and guess.isalpha():
+            if guess in words_guessed:
+                print("You've already guessed that, try again")
+        else:
+            print("Invalid input. Enter a letter or word.")
