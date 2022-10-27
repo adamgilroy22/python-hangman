@@ -1,4 +1,10 @@
+import random
+
+
 def game_menu():
+    """
+    Menu to begin game, change difficulty and view rules
+    """
     print("Press 1 To Start Game")
     print("Press 2 To Select Difficulty")
     print("Press 3 To View Rules")
@@ -17,3 +23,11 @@ def game_menu():
 
         else:
             print("Select 1, 2 or 3")
+
+
+def random_word():
+    """
+    Select random word from words.txt to be used
+    in game. Word must be at least 3 characters.
+    """
+    
