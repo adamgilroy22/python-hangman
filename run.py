@@ -1,3 +1,4 @@
+# imports
 import random
 
 
@@ -30,4 +31,13 @@ def random_word():
     Select random word from words.txt to be used
     in game. Word must be at least 3 characters.
     """
-    
+    word = ""
+    while len(word) < 3:
+        with open("words.txt", "r") as file:
+            all_words = file.read()
+            word = list(map(str, all_words.split('\n')))
+
+    return random.choice(word).upper
+
+
+random_word()
