@@ -35,9 +35,10 @@ def random_word():
     while len(word) < 3:
         with open("words.txt", "r") as file:
             all_words = file.read()
-            word = list(map(str, all_words.split('\n')))
+            word_list = list(map(str, all_words.split('\n')))
+            word = random.choice(word_list).upper
 
-    return random.choice(word).upper
+    return word
 
 
 random_word()
