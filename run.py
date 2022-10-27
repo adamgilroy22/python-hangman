@@ -43,3 +43,7 @@ def random_word():
 
 def game(word):
     word_hint = "_" * len(word)
+    guessed_correct = False
+    letters_guessed = []
+    words_guessed = []
+    lives = 6
