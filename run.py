@@ -36,9 +36,10 @@ def random_word():
         with open("words.txt", "r") as file:
             all_words = file.read()
             word_list = list(map(str, all_words.split('\n')))
-            word = random.choice(word_list).upper
+            word = random.choice(word_list)
 
-    return word
+    return word.upper()
 
 
-random_word()
+def game(word):
+    word_hint = "_" * len(word)
