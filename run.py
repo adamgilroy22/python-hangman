@@ -45,6 +45,10 @@ def random_word():
 def game(word):
     """
     Play game.
+    Check if user guess is a letter or word.
+    Check if guess is in word or is the word.
+    Lose life if not.
+    Display win/lose message.
     """
     word_hint = "_" * len(word)
     guessed_correct = False
