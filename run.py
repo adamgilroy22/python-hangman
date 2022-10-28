@@ -97,6 +97,7 @@ def main():
     """
     Run game.
     """
+    title()
     word = random_word()
     game(word)
 
