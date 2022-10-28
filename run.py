@@ -56,8 +56,8 @@ def game(word):
     words_guessed = []
     lives = 6
     print("Time to start guessing!")
-    print(word_hint)
     while not guessed_correct and lives > 0:
+        print(word_hint)
         print(f"You have {lives} guesses remaining.")
         guess = input("Guess a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
