@@ -17,13 +17,10 @@ def game_menu():
         selection = input("What would you like to do?\n")
         if selection == 1:
             menu_selection = True
-
         elif selection == 2:
             menu_selection = True
-
         elif selection == 3:
             menu_selection = True
-
         else:
             print("Select 1, 2 or 3")
 
@@ -70,13 +67,20 @@ def game(word):
             else:
                 print(f"Great, {guess} is in the word!")
                 letters_guessed.append(guess)
+                word_split = list(word_hint)
+                indices = [i for i, letter in enumerate(word) if letter == guess]
+                for index in indices:
+                    word_split[index] = guess
+                word_hint = "".join(word_split)
+                if "_" not in word_hint:
+                    guessed_correct = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in words_guessed:
                 print(f"You've already guessed {guess}, try again.")
             elif guess != word:
                 print(f"{guess} is not the word.")
                 lives -= 1
-                words_guessed.append(guess)
+                print(f"Full words guessed: {words_guessed}")
             else:
                 guessed_correct = True
         else:
