@@ -70,5 +70,11 @@ def game(word):
         elif len(guess) == len(word) and guess.isalpha():
             if guess in words_guessed:
                 print(f"You've already guessed {guess}, try again")
+            elif guess != word:
+                print(f"{guess} is not the word.")
+                lives -= 1
+                words_guessed.append(guess)
+            else:
+                guessed_correct = True
         else:
             print("Invalid input. Enter a letter or word.")
