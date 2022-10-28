@@ -39,8 +39,7 @@ def random_word():
             all_words = file.read()
             word_list = list(map(str, all_words.split('\n')))
             word = random.choice(word_list)
-
-    return word.upper()
+            return word.upper()
 
 
 def game(word):
@@ -82,3 +81,14 @@ def game(word):
         print(f"Congratulations! The word was {word}.")
     else:
         print(f"Out of guesses, the word was {word}.")
+
+
+def main():
+    """
+    Run game.
+    """
+    word = random_word()
+    game(word)
+
+
+main()
