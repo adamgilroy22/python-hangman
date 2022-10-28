@@ -70,7 +70,8 @@ def game(word):
                 print(f"Great, {guess} is in the word!")
                 letters_guessed.append(guess)
                 word_split = list(word_hint)
-                indices = [i for i, letter in enumerate(word) if letter == guess]
+                indices = [i for i, letter in enumerate(word)
+                           if letter == guess]
                 for index in indices:
                     word_split[index] = guess
                 word_hint = "".join(word_split)
