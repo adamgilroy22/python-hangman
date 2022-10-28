@@ -85,6 +85,7 @@ def game(word):
             elif guess != word:
                 print(f"{guess} is not the word.")
                 lives -= 1
+                words_guessed.append(guess)
                 print(f"Full words guessed: {words_guessed}")
             else:
                 guessed_correct = True
