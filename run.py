@@ -2,6 +2,8 @@
 Imports
 """
 import random
+from graphics import title
+from graphics import hangman
 
 
 def game_menu():
