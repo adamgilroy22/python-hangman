@@ -38,7 +38,7 @@ def random_word():
             all_words = file.read()
             word_list = list(map(str, all_words.split('\n')))
             word = random.choice(word_list)
-            return word.upper()
+    return word.upper()
 
 
 def game(word):
@@ -59,6 +59,7 @@ def game(word):
         print(hangman(lives))
         print(word_hint)
         print(f"You have {lives} guesses remaining.")
+        print(f"The word has {len(word)} letters.")
         guess = input("Guess a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in letters_guessed:
