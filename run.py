@@ -55,13 +55,13 @@ def game(word):
     print("Time to start guessing!")
     print(word_hint)
     while not guessed_correct and lives > 0:
-        print(f"You have {lives} guesses remaining")
+        print(f"You have {lives} guesses remaining.")
         guess = input("Guess a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in letters_guessed:
-                print(f"You've already guessed {guess}, try again")
+                print(f"You've already guessed {guess}, try again.")
             elif guess not in word:
-                print(f"{guess} is not in the word")
+                print(f"{guess} is not in the word.")
                 lives -= 1
                 letters_guessed.append(guess)
             else:
@@ -69,7 +69,7 @@ def game(word):
                 letters_guessed.append(guess)
         elif len(guess) == len(word) and guess.isalpha():
             if guess in words_guessed:
-                print(f"You've already guessed {guess}, try again")
+                print(f"You've already guessed {guess}, try again.")
             elif guess != word:
                 print(f"{guess} is not the word.")
                 lives -= 1
@@ -78,3 +78,7 @@ def game(word):
                 guessed_correct = True
         else:
             print("Invalid input. Enter a letter or word.")
+    if guessed_correct:
+        print(f"Congratulations! The word was {word}.")
+    else:
+        print(f"Out of guesses, the word was {word}.")
