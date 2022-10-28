@@ -56,6 +56,7 @@ def game(word):
     lives = 6
     print("Time to start guessing!")
     while not guessed_correct and lives > 0:
+        print(hangman(lives))
         print(word_hint)
         print(f"You have {lives} guesses remaining.")
         guess = input("Guess a letter or word: ").upper()

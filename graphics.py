@@ -13,8 +13,12 @@ def title():
     )
 
 
-def hangman():
-    lives = ['''
+def hangman(lives):
+    """
+    Print hangman stages indexing
+    list of stages with lives remaining.
+    """
+    hangman_lives = ['''
   +---+
   |   |
       |
@@ -64,3 +68,4 @@ def hangman():
  / \  |
       |
 =========''']
+    return hangman_lives[lives]
