@@ -92,6 +92,7 @@ def game(word):
     if guessed_correct:
         print(f"Congratulations! The word was {word}.")
     else:
+        print(hangman(lives))
         print(f"Out of guesses, the word was {word}.")
 
 
