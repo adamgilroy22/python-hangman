@@ -27,6 +27,25 @@ def game_menu():
             print("Select 1, 2 or 3")
 
 
+def game_rules():
+    """
+    Shows user game rules and how to play
+    """
+    print(
+        """
+        Try to save the hangman by guessing the word.
+        Guess either single letters or full words.
+        If you guess wrong, you will lose a life
+        and the hangman will get closer to his demise.
+        Get the word in 9 guesses (6 in hard mode)
+        and the hangman will be spared.
+        Can you save the hangman?
+        """
+    )
+    input("Press enter to return to main menu")
+    main()
+
+
 def random_word():
     """
     Select random word from words.txt to be used
