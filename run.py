@@ -10,9 +10,9 @@ def game_menu():
     """
     Menu to begin game, change difficulty and view rules
     """
-    print("Press 1 To Start Game")
-    print("Press 2 To Select Difficulty")
-    print("Press 3 To View Rules")
+    print("Press 1 for normal game")
+    print("Press 2 for hard game")
+    print("Press 3 to view rules")
 
     menu_selection = False
     while not menu_selection:
@@ -20,8 +20,12 @@ def game_menu():
         selection = int(selection)
         if selection == 1:
             menu_selection = True
+            lives = 9
+            return lives
         elif selection == 2:
             menu_selection = True
+            lives = 6
+            return lives
         elif selection == 3:
             menu_selection = True
             game_rules()
@@ -62,7 +66,7 @@ def random_word():
     return word.upper()
 
 
-def game(word):
+def game(word, lives):
     """
     Play game.
     Check if user guess is a letter or word.
@@ -74,7 +78,6 @@ def game(word):
     guessed_correct = False
     letters_guessed = []
     words_guessed = []
-    lives = 9
     print("Time to start guessing!")
     while not guessed_correct and lives > 0:
         print(hangman(lives))
@@ -124,9 +127,10 @@ def main():
     Run game.
     """
     title()
-    word = random_word()
     game_menu()
-    game(word)
+    word = random_word()
+    lives = game_menu()
+    game(word, lives)
 
 
 main()
