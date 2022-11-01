@@ -74,7 +74,7 @@ def game(word):
     guessed_correct = False
     letters_guessed = []
     words_guessed = []
-    lives = 6
+    lives = 9
     print("Time to start guessing!")
     while not guessed_correct and lives > 0:
         print(hangman(lives))
