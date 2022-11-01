@@ -19,6 +19,27 @@ def hangman(lives):
     list of stages with lives remaining.
     """
     hangman_lives = ['''
+       
+       
+       
+       
+       
+       
+=========''', '''
+       
+      |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+      |
+      |
+      |
+      |
+      |
+=========''', '''
   +---+
   |   |
       |
