@@ -17,12 +17,14 @@ def game_menu():
     menu_selection = False
     while not menu_selection:
         selection = input("What would you like to do?\n")
+        selection = int(selection)
         if selection == 1:
             menu_selection = True
         elif selection == 2:
             menu_selection = True
         elif selection == 3:
             menu_selection = True
+            game_rules()
         else:
             print("Select 1, 2 or 3")
 
@@ -123,6 +125,7 @@ def main():
     """
     title()
     word = random_word()
+    game_menu()
     game(word)
 
 
