@@ -8,7 +8,7 @@ from graphics import hangman
 
 def game_menu():
     """
-    Menu to begin game, change difficulty and view rules
+    Menu to begin game, select difficulty and view rules
     """
     print("Press 1 for normal game")
     print("Press 2 for hard game")
@@ -66,7 +66,7 @@ def random_word():
     return word.upper()
 
 
-def game(word, lives):
+def game(word, num_lives):
     """
     Play game.
     Check if user guess is a letter or word.
@@ -78,6 +78,7 @@ def game(word, lives):
     guessed_correct = False
     letters_guessed = []
     words_guessed = []
+    lives = num_lives
     print("Time to start guessing!")
     while not guessed_correct and lives > 0:
         print(hangman(lives))
