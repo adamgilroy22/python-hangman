@@ -10,8 +10,8 @@ def game_menu():
     """
     Menu to begin game, select difficulty and view rules
     """
-    print("Press 1 for normal game")
-    print("Press 2 for hard game")
+    print("Press 1 to play game")
+    print("Press 2 to select difficulty")
     print("Press 3 to view rules")
 
     menu_selection = False
@@ -20,17 +20,47 @@ def game_menu():
         selection = int(selection)
         if selection == 1:
             menu_selection = True
-            lives = 9
+            lives = 7
             return lives
         elif selection == 2:
             menu_selection = True
-            lives = 6
+            game_difficulty()
+            lives = game_difficulty()
             return lives
         elif selection == 3:
             menu_selection = True
             game_rules()
         else:
-            print("Select 1, 2 or 3")
+            print("Please select 1, 2 or 3")
+
+
+def game_difficulty():
+    """
+    Let user select easy, normal or hard difficulty
+    """
+    print("Select difficulty")
+    print("1. Easy - 9 lives")
+    print("2. Normal - 7 lives")
+    print("3. Hard - 5 lives")
+
+    difficulty_selection = False
+    while not difficulty_selection:
+        difficulty = input("What would you like to do?\n")
+        difficulty = int(difficulty)
+        if difficulty == 1:
+            difficulty_selection = True
+            num_lives = 9
+            return num_lives
+        elif difficulty == 2:
+            difficulty_selection = True
+            num_lives = 7
+            return num_lives
+        elif difficulty == 3:
+            difficulty_selection = True
+            num_lives = 5
+            return num_lives
+        else:
+            print("Please select 1, 2 or 3")
 
 
 def game_rules():
