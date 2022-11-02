@@ -12,16 +12,12 @@ def game_menu():
     """
     print("Press 1 to play game")
     print("Press 2 to view rules")
-
     menu_selection = False
     while not menu_selection:
         selection = input("What would you like to do?\n")
         selection = int(selection)
         if selection == 1:
             menu_selection = True
-            game_difficulty()
-            lives = game_difficulty()
-            return lives
         elif selection == 2:
             menu_selection = True
             game_rules()
@@ -154,8 +150,8 @@ def main():
     """
     title()
     game_menu()
+    lives = game_difficulty()
     word = random_word()
-    lives = game_menu()
     game(word, lives)
 
 
