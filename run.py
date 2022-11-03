@@ -9,7 +9,7 @@ from colorama import Fore
 from graphics import title
 from graphics import hangman
 
-colorama.init(autoreset=True)
+colorama.init(autoreset=True)  # Set so colours auto-reset after being printed
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -115,7 +115,7 @@ def game(word, num_lives):
     Lose life if not.
     Display win/lose message.
     """
-    word_hint = "_" * len(word)
+    word_hint = "_ " * len(word)
     guessed_correct = False
     letters_guessed = []
     words_guessed = []
