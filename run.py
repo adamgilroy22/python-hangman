@@ -6,8 +6,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import colorama
 from colorama import Fore
-from graphics import title
-from graphics import hangman
+from graphics import title, hangman
 
 colorama.init(autoreset=True)  # Set so colours auto-reset after being printed
 
@@ -36,10 +35,9 @@ def game_menu():
     menu_selection = False
     while not menu_selection:
         selection = input("What would you like to do?\n")
-        selection = int(selection)
-        if selection == 1:
+        if selection == "1":
             menu_selection = True
-        elif selection == 2:
+        elif selection == "2":
             menu_selection = True
             game_rules()
         else:
