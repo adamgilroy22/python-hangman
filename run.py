@@ -8,7 +8,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import colorama
 from colorama import Fore
-colorama.init()
+colorama.init(autoreset=True)
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -49,14 +49,13 @@ def game_difficulty():
     """
     Let user select easy, normal or hard difficulty
     """
-    print("Select difficulty")
-    print("1. Easy - 9 lives")
-    print("2. Normal - 7 lives")
-    print("3. Hard - 5 lives")
-
     difficulty_selection = False
     while not difficulty_selection:
-        difficulty = input("What would you like to do?\n")
+        print("Select difficulty")
+        print(Fore.GREEN + "1. Easy - 9 lives")
+        print(Fore.YELLOW + "2. Normal - 7 lives")
+        print(Fore.RED + "3. Hard - 5 lives")
+        difficulty = input("\n")
         difficulty = int(difficulty)
         if difficulty == 1:
             difficulty_selection = True
