@@ -6,6 +6,9 @@ from graphics import title
 from graphics import hangman
 import gspread
 from google.oauth2.service_account import Credentials
+import colorama
+from colorama import Fore
+colorama.init()
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
