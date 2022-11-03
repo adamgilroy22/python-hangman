@@ -115,7 +115,7 @@ def game(word, num_lives):
     Lose life if not.
     Display win/lose message.
     """
-    word_hint = "_ " * len(word)
+    word_hint = "_" * len(word)
     guessed_correct = False
     letters_guessed = []
     words_guessed = []
