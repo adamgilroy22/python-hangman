@@ -41,7 +41,7 @@ def game_menu():
             menu_selection = True
             game_rules()
         else:
-            print("Please select 1 or 2")
+            print(f"{selection} is not valid. Please select 1 or 2")
 
 
 def game_difficulty():
@@ -55,21 +55,20 @@ def game_difficulty():
         print(Fore.YELLOW + "2. Normal - 7 lives")
         print(Fore.RED + "3. Hard - 5 lives")
         difficulty = input()
-        difficulty = int(difficulty)
-        if difficulty == 1:
+        if difficulty == "1":
             difficulty_selection = True
             num_lives = 9
             return num_lives
-        elif difficulty == 2:
+        elif difficulty == "2":
             difficulty_selection = True
             num_lives = 7
             return num_lives
-        elif difficulty == 3:
+        elif difficulty == "3":
             difficulty_selection = True
             num_lives = 5
             return num_lives
         else:
-            print("Please select 1, 2 or 3")
+            print(f"{difficulty} is not valid. Please select 1, 2 or 3")
 
 
 def game_rules():
