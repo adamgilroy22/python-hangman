@@ -120,7 +120,9 @@ def game(word, num_lives):
     print("Time to start guessing!")
     while not guessed_correct and lives > 0:
         print(hangman(lives))
-        print(word_hint)
+        for space in word_hint:
+            print(space, end=" ")
+        print("")
         print(f"You have {lives} guesses remaining.")
         print(f"The word has {len(word)} letters.")
         print(f"Letters guessed: {letters_guessed}")
