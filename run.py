@@ -2,12 +2,13 @@
 Imports
 """
 import random
-from graphics import title
-from graphics import hangman
 import gspread
 from google.oauth2.service_account import Credentials
 import colorama
 from colorama import Fore
+from graphics import title
+from graphics import hangman
+
 colorama.init(autoreset=True)
 
 SCOPE = [
@@ -137,7 +138,6 @@ def game(word, num_lives):
             else:
                 print(f"Great, {guess} is in the word!")
                 letters_guessed.append(guess)
-                print(f"Letters guessed: {letters_guessed}")
                 word_split = list(word_hint)
                 indices = [i for i, letter in enumerate(word)
                            if letter == guess]
