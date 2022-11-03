@@ -55,7 +55,7 @@ def game_difficulty():
         print(Fore.GREEN + "1. Easy - 9 lives")
         print(Fore.YELLOW + "2. Normal - 7 lives")
         print(Fore.RED + "3. Hard - 5 lives")
-        difficulty = input("\n")
+        difficulty = input()
         difficulty = int(difficulty)
         if difficulty == 1:
             difficulty_selection = True
@@ -125,6 +125,7 @@ def game(word, num_lives):
         print(word_hint)
         print(f"You have {lives} guesses remaining.")
         print(f"The word has {len(word)} letters.")
+        print(f"Letters guessed: {letters_guessed}")
         guess = input("Guess a letter or word:\n").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in letters_guessed:
@@ -133,7 +134,6 @@ def game(word, num_lives):
                 print(f"{guess} is not in the word.")
                 lives -= 1
                 letters_guessed.append(guess)
-                print(f"Letters guessed: {letters_guessed}")
             else:
                 print(f"Great, {guess} is in the word!")
                 letters_guessed.append(guess)
@@ -153,7 +153,6 @@ def game(word, num_lives):
                 print(f"{guess} is not the word.")
                 lives -= 1
                 words_guessed.append(guess)
-                print(f"Full words guessed: {words_guessed}")
             else:
                 guessed_correct = True
         else:
