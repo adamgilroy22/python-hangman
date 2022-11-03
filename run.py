@@ -131,9 +131,11 @@ def game(word, num_lives):
                 print(f"{guess} is not in the word.")
                 lives -= 1
                 letters_guessed.append(guess)
+                print(f"Letters guessed: {letters_guessed}")
             else:
                 print(f"Great, {guess} is in the word!")
                 letters_guessed.append(guess)
+                print(f"Letters guessed: {letters_guessed}")
                 word_split = list(word_hint)
                 indices = [i for i, letter in enumerate(word)
                            if letter == guess]
