@@ -81,12 +81,12 @@ def game_rules():
         Guess either single letters or full words.
         If you guess wrong, you will lose a life
         and the hangman will get closer to his demise.
-        Get the word in 9 guesses (6 in hard mode)
+        Get the word before your lives are up
         and the hangman will be spared.
         Can you save the hangman?
         """
     )
-    input("Press enter to return to main menu")
+    input("Press enter to return to main menu\n")
     main()
 
 
@@ -123,7 +123,7 @@ def game(word, num_lives):
         print(word_hint)
         print(f"You have {lives} guesses remaining.")
         print(f"The word has {len(word)} letters.")
-        guess = input("Guess a letter or word: ").upper()
+        guess = input("Guess a letter or word:\n").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in letters_guessed:
                 print(f"You've already guessed {guess}, try again.")
