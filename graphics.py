@@ -1,16 +1,9 @@
+import pyfiglet
+
+
 def title():
-    print(
-        """
-  _    _
- | |  | |
- | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __ 
- |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
- | |  | | (_| | | | | (_| | | | | | | (_| | | | |
- |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                      __/ |
-                     |___/
-        """
-    )
+    game_title = pyfiglet.figlet_format("Hangman", font="big")
+    print(game_title)
 
 
 def hangman(lives):
