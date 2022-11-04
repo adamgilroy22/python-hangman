@@ -6,7 +6,7 @@ import os
 import gspread
 from google.oauth2.service_account import Credentials
 import colorama
-from colorama import Fore
+from colorama import Fore, Style
 from graphics import title, hangman
 
 colorama.init(autoreset=True)  # Set so colours auto-reset after being printed
@@ -58,9 +58,9 @@ def game_difficulty():
     """
     while True:
         print("Select difficulty")
-        print(Fore.GREEN + "1. Easy - 9 lives")
-        print(Fore.YELLOW + "2. Normal - 7 lives")
-        print(Fore.RED + "3. Hard - 5 lives")
+        print(Fore.GREEN + Style.BRIGHT + "1. Easy - 9 lives")
+        print(Fore.YELLOW + Style.BRIGHT + "2. Normal - 7 lives")
+        print(Fore.RED + Style.BRIGHT + "3. Hard - 5 lives")
         difficulty = input()
         if difficulty == "1":
             num_lives = 9
