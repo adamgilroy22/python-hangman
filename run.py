@@ -2,6 +2,7 @@
 Imports
 """
 import random
+import os
 import gspread
 from google.oauth2.service_account import Credentials
 import colorama
@@ -24,6 +25,13 @@ SHEET = GSPREAD_CLIENT.open('hangman')
 user_data = SHEET.worksheet('user_data')
 
 data = user_data.get_all_values()
+
+
+def clear_screen():
+    """
+    Clear function to clean-up the terminal so things don't get messy.
+    """
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 def game_menu():
