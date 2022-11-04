@@ -165,9 +165,13 @@ def game(word, num_lives):
                 words_guessed.append(guess)
             else:
                 guessed_correct = True
+        elif len(guess) > 1 and len(guess) != len(word) and guess.isalpha():
+            clear_screen()
+            print(f"{guess} is {len(guess)} letters long.")
+            print(f"The word is {len(word)} letters long, try again.")
         else:
             clear_screen()
-            print("Invalid input. Enter a letter or word.")
+            print(f"{guess} is not a valid input. Enter a letter or word.")
     if guessed_correct:
         clear_screen()
         print(hangman(lives))
