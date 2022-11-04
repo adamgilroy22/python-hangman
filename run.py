@@ -38,9 +38,10 @@ def game_menu():
     """
     Menu to begin game, view rules or check leaderboard
     """
-    print("Press 1 to play game")
-    print("Press 2 to view rules")
     while True:
+        title()
+        print("Press 1 to play game")
+        print("Press 2 to view rules")
         selection = input("What would you like to do?\n")
         if selection == "1":
             break
@@ -89,7 +90,6 @@ def game_rules():
         """
     )
     input("Press enter to return to main menu\n")
-    main()
 
 
 def random_word():
@@ -169,7 +169,6 @@ def main():
     """
     Run game.
     """
-    title()
     game_menu()
     lives = game_difficulty()
     word = random_word()
