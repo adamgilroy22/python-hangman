@@ -83,13 +83,13 @@ def game_rules():
     clear_screen()
     print(
         """
-        Try to save the hangman by guessing the word.
-        Guess either single letters or full words.
-        If you guess wrong, you will lose a life
-        and the hangman will get closer to his demise.
-        Get the word before your lives are up
-        and the hangman will be spared.
-        Can you save the hangman?
+    Try to save the hangman by guessing the word.
+    Guess either single letters or full words.
+    If you guess wrong, you will lose a life
+    and the hangman will get closer to his demise.
+    Get the word before your lives are up
+    and the hangman will be spared.
+    Can you save the hangman?
         """
     )
     input("Press enter to return to main menu\n")
@@ -183,9 +183,18 @@ def main():
     Run game.
     """
     game_menu()
-    lives = game_difficulty()
-    word = random_word()
-    game(word, lives)
+    while True:
+        lives = game_difficulty()
+        word = random_word()
+        game(word, lives)
+        restart = input("Play again? (Y/N)\n")
+        if restart.upper() == "Y":
+            print("Starting again")
+        elif restart.upper() == "N":
+            print("Thanks for playing!")
+            break
+        else:
+            print("Select Y or N")
 
 
 main()

@@ -1,9 +1,11 @@
 import pyfiglet
+import colorama
+from colorama import Fore, Style
 
 
 def title():
     game_title = pyfiglet.figlet_format("Hangman", font="big")
-    print(game_title)
+    print(Fore.CYAN + Style.BRIGHT + game_title)
 
 
 def hangman(lives):
