@@ -22,9 +22,9 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('hangman')
 
-user_data = SHEET.worksheet('user_data')
+leaderboard = SHEET.worksheet('leaderboard')
 
-data = user_data.get_all_values()
+data = leaderboard.get_all_values()
 
 
 def clear_screen():
@@ -40,13 +40,11 @@ def game_menu():
     """
     print("Press 1 to play game")
     print("Press 2 to view rules")
-    menu_selection = False
-    while not menu_selection:
+    while True:
         selection = input("What would you like to do?\n")
         if selection == "1":
-            menu_selection = True
+            break
         elif selection == "2":
-            menu_selection = True
             game_rules()
         else:
             print(f"{selection} is not valid. Please select 1 or 2")
@@ -56,23 +54,19 @@ def game_difficulty():
     """
     Let user select easy, normal or hard difficulty
     """
-    difficulty_selection = False
-    while not difficulty_selection:
+    while True:
         print("Select difficulty")
         print(Fore.GREEN + "1. Easy - 9 lives")
         print(Fore.YELLOW + "2. Normal - 7 lives")
         print(Fore.RED + "3. Hard - 5 lives")
         difficulty = input()
         if difficulty == "1":
-            difficulty_selection = True
             num_lives = 9
             return num_lives
         elif difficulty == "2":
-            difficulty_selection = True
             num_lives = 7
             return num_lives
         elif difficulty == "3":
-            difficulty_selection = True
             num_lives = 5
             return num_lives
         else:
