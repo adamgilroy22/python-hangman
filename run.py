@@ -34,6 +34,28 @@ def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
 
+def player_details():
+    print("Welcome to Hangman!")
+    while True:
+        player_name = input("What is your name?\n")
+        if player_name.isalpha():
+            location = False
+            while not location:
+                player_place = input("Where are you from?\n")
+                if player_place.isalpha():
+                    print(f"Okay {player_name} from {player_place}, let's go!")
+                    player_score = 0
+                    return player_name, player_place, player_score
+                    location = True
+                    break
+                else:
+                    clear_screen()
+                    print(f"{player_place} is not valid, try again")
+        else:
+            clear_screen()
+            print(f"{player_name} is not valid, try again")
+
+
 def game_menu():
     """
     Menu to begin game, view rules or check leaderboard
@@ -63,14 +85,11 @@ def game_difficulty():
         print(Fore.RED + Style.BRIGHT + "3. Hard - 5 lives")
         difficulty = input()
         if difficulty == "1":
-            num_lives = 9
-            return num_lives
+            return difficulty
         elif difficulty == "2":
-            num_lives = 7
-            return num_lives
+            return difficulty
         elif difficulty == "3":
-            num_lives = 5
-            return num_lives
+            return difficulty
         else:
             clear_screen()
             print(f"{difficulty} is not valid. Please select 1, 2 or 3")
@@ -109,7 +128,7 @@ def random_word():
     return word.upper()
 
 
-def game(word, num_lives):
+def game(word, difficulty):
     """
     Play game.
     Check if user guess is a letter or word.
@@ -121,7 +140,12 @@ def game(word, num_lives):
     guessed_correct = False
     letters_guessed = []
     words_guessed = []
-    lives = num_lives
+    if difficulty == "1":
+        lives = 9
+    elif difficulty == "2":
+        lives = 7
+    elif difficulty == "3":
+        lives = 5
     clear_screen()
     print("Time to start guessing!")
     while not guessed_correct and lives > 0:
@@ -187,11 +211,12 @@ def main():
     Run game.
     Give user the option to restart the game once complete.
     """
+    player_details()
     game_menu()
     while True:
-        lives = game_difficulty()
+        difficulty = game_difficulty()
         word = random_word()
-        game(word, lives)
+        game(word, difficulty)
         reset_game = False
         while not reset_game:
             restart = input("Play again? (Y/N)\n")
