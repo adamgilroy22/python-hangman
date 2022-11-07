@@ -185,20 +185,26 @@ def game(word, num_lives):
 def main():
     """
     Run game.
+    Give user the option to restart the game once complete.
     """
     game_menu()
     while True:
         lives = game_difficulty()
         word = random_word()
         game(word, lives)
-        restart = input("Play again? (Y/N)\n")
-        if restart.upper() == "Y":
-            print("Starting again")
-        elif restart.upper() == "N":
-            print("Thanks for playing!")
-            break
-        else:
-            print("Select Y or N")
+        reset_game = False
+        while not reset_game:
+            restart = input("Play again? (Y/N)\n")
+            if restart.upper() == "Y":
+                clear_screen()
+                print("Starting again")
+                reset_game = True
+            elif restart.upper() == "N":
+                print("Thanks for playing!")
+                quit()
+            else:
+                clear_screen()
+                print(f"{restart} is not a valid input. Type Y or N.")
 
 
 main()
