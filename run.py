@@ -22,11 +22,11 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('hangman')
 
+leaderboard = SHEET.worksheet('leaderboard')
+leaderboard_scores = leaderboard.get_all_values()
+
 
 def update_leaderboard(player):
-    leaderboard = SHEET.worksheet('leaderboard')
-    leaderboard_scores = leaderboard.get_all_values()
-
     for count, score in enumerate(leaderboard_scores[1:11], 2):
         if player.score > int(score[2]):
             print(f"Well done {player.name}, you made the top 10!")
