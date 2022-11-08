@@ -216,7 +216,11 @@ def game(word, difficulty, player):
     else:
         clear_screen()
         print(hangman(lives))
-        print(f"Out of guesses, the word was {word}.")
+        if player.score < 1:
+            print(f"Out of guesses, the word was {word}.")
+        else:
+            player.score -= 1
+            print(f"Unlucky, the word was {word}. Score: {player.score}")
 
 
 def main():
