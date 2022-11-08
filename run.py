@@ -22,9 +22,17 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('hangman')
 
-leaderboard = SHEET.worksheet('leaderboard')
 
-leaderboard_scores = leaderboard.get_all_values()
+def update_leaderboard(player):
+    leaderboard = SHEET.worksheet('leaderboard')
+    leaderboard_scores = leaderboard.get_all_values()
+
+    for count, score in enumerate(leaderboard_scores[1:11], 2):
+        if player.score > int(score[2]):
+            print(f"Well done {player.name}, you made the top 10!")
+            break
+    else:
+        print("You didn't make the top 10, sorry!")
 
 
 class Player:
@@ -159,6 +167,7 @@ def game(word, difficulty, player):
         player.lives = 5
     clear_screen()
     print("Time to start guessing!")
+    print(word)
     if player.score > 0:
         print(f"Your score is {player.score}")
     while not guessed_correct and player.lives > 0:
@@ -242,6 +251,7 @@ def main():
         difficulty = game_difficulty()
         word = random_word()
         game(word, difficulty, player)
+        update_leaderboard(player)
         reset_game = False
         while not reset_game:
             restart = input("Play again? (Y/N)\n")
