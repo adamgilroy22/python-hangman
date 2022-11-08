@@ -35,10 +35,8 @@ def update_leaderboard(player):
     """
     for count, score in enumerate(leaderboard_scores[1:11], 2):
         if player.score > int(score[2]):
-            print(f"""
-    Well done {player.name}, you made the top 10
-    with {player.score} points!
-    """)
+            print(f"Well done {player.name}, you made the top 10 with")
+            print(f"{player.score} points!")
             player_as_list = [player.name, player.place, player.score]
             leaderboard.append_row(player_as_list)
             leaderboard.sort((3, 'des'), range='A2:C999')
@@ -48,7 +46,20 @@ def update_leaderboard(player):
         print(f"Unlucky, {player.name} You didn't make the top 10 this time!")
 
 
+def display_leaderboard():
+    """
+    Print current leaderboard
+    """
+    for x in leaderboard_scores:
+        print(*x)
+    input("Press enter to return to main menu\n")
+
+
 class Player:
+    """
+    Player class used to create player object
+    containing name, location, number of lives and current score
+    """
     def __init__(self, name, place, lives, score):
         self.name = name
         self.place = place
@@ -96,14 +107,17 @@ def game_menu():
         title()
         print("Press 1 to play game")
         print("Press 2 to view rules")
+        print("Press 3 to view leaderboard")
         selection = input("What would you like to do?\n")
         if selection == "1":
             break
         elif selection == "2":
             game_rules()
+        elif selection == "3":
+            display_leaderboard()
         else:
             clear_screen()
-            print(f"{selection} is not valid. Please select 1 or 2")
+            print(f"{selection} is not valid. Please select 1, 2 or 3")
 
 
 def game_difficulty():
