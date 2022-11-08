@@ -24,14 +24,14 @@ SHEET = GSPREAD_CLIENT.open('hangman')
 
 leaderboard = SHEET.worksheet('leaderboard')
 
-data = leaderboard.get_all_values()
+leaderboard_scores = leaderboard.get_all_values()
 
 
 class Player:
     def __init__(self, name, place, lives, score):
         self.name = name
         self.place = place
-        self.lives = 5
+        self.lives = 7
         self.score = 0
 
 
@@ -218,6 +218,8 @@ def game(word, difficulty, player):
             player.score += 2
         elif difficulty == "3":
             player.score += 3
+        if len(word) > 6:
+            player.score += 1
         print(f"Congratulations! The word was {word}.")
     else:
         clear_screen()
