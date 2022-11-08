@@ -42,6 +42,10 @@ def clear_screen():
 
 
 def player_details():
+    """
+    Prompt player to enter their name and location
+    and sets starting score to 0.
+    """
     print("Welcome to Hangman!")
     while True:
         player_name = input("What is your name?\n")
@@ -155,6 +159,8 @@ def game(word, difficulty, player):
         lives = 5
     clear_screen()
     print("Time to start guessing!")
+    if player.score > 0:
+        print(f"Your score is {player.score}")
     while not guessed_correct and lives > 0:
         print(hangman(lives))
         for space in word_hint:
@@ -212,7 +218,7 @@ def game(word, difficulty, player):
             player.score += 2
         elif difficulty == "3":
             player.score += 3
-        print(f"Congratulations! The word was {word}. Score: {player.score}")
+        print(f"Congratulations! The word was {word}.")
     else:
         clear_screen()
         print(hangman(lives))
@@ -220,7 +226,7 @@ def game(word, difficulty, player):
             print(f"Out of guesses, the word was {word}.")
         else:
             player.score -= 1
-            print(f"Unlucky, the word was {word}. Score: {player.score}")
+            print(f"Out of guesses, the word was {word}.")
 
 
 def main():
@@ -242,7 +248,7 @@ def main():
                 print("Starting again")
                 reset_game = True
             elif restart.upper() == "N":
-                print("Thanks for playing!")
+                print(f"Thanks for playing! Final score: {player.score}")
                 quit()
             else:
                 clear_screen()
