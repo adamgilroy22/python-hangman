@@ -54,10 +54,9 @@ def player_details():
             while not location:
                 player_place = input("Where are you from?\n")
                 if player_place.isalpha():
-                    player_score = 0
                     print(f"Okay {player_name} from {player_place}, let's go!")
-                    player = Player({player_name}, {player_place},
-                                    {player_score})
+                    player = Player(name=player_name, place=player_place,
+                                    score=0)
                     return player
                 else:
                     clear_screen()
@@ -248,7 +247,8 @@ def main():
                 print("Starting again")
                 reset_game = True
             elif restart.upper() == "N":
-                print(f"Thanks for playing! Final score: {player.score}")
+                print(f"Thanks for playing {player.name}!")
+                print(f"Final score: {player.score}")
                 quit()
             else:
                 clear_screen()
