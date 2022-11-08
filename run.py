@@ -27,12 +27,25 @@ leaderboard_scores = leaderboard.get_all_values()
 
 
 def update_leaderboard(player):
+    """
+    Adds user data to leaderboard and notifies
+    the player if they are in the top 10 scores
+    Sorts leaderboard sheet by scores descending from
+    highest to lowest.
+    """
     for count, score in enumerate(leaderboard_scores[1:11], 2):
         if player.score > int(score[2]):
-            print(f"Well done {player.name}, you made the top 10!")
+            print(f"""
+    Well done {player.name}, you made the top 10
+    with {player.score} points!
+    """)
+            player_as_list = [player.name, player.place, player.score]
+            leaderboard.append_row(player_as_list)
+            leaderboard.sort((3, 'des'), range='A2:C999')
+            leaderboard.delete_rows(12)
             break
     else:
-        print("You didn't make the top 10, sorry!")
+        print(f"Unlucky, {player.name} You didn't make the top 10 this time!")
 
 
 class Player:
@@ -251,7 +264,6 @@ def main():
         difficulty = game_difficulty()
         word = random_word()
         game(word, difficulty, player)
-        update_leaderboard(player)
         reset_game = False
         while not reset_game:
             restart = input("Play again? (Y/N)\n")
@@ -262,6 +274,7 @@ def main():
             elif restart.upper() == "N":
                 print(f"Thanks for playing {player.name}!")
                 print(f"Final score: {player.score}")
+                update_leaderboard(player)
                 quit()
             else:
                 clear_screen()
