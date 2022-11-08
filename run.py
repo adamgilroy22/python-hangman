@@ -28,9 +28,10 @@ data = leaderboard.get_all_values()
 
 
 class Player:
-    def __init__(self, name, place, score):
+    def __init__(self, name, place, lives, score):
         self.name = name
         self.place = place
+        self.lives = 5
         self.score = 0
 
 
@@ -56,7 +57,7 @@ def player_details():
                 if player_place.isalpha():
                     print(f"Okay {player_name} from {player_place}, let's go!")
                     player = Player(name=player_name, place=player_place,
-                                    score=0)
+                                    lives=7, score=0)
                     return player
                 else:
                     clear_screen()
@@ -151,21 +152,21 @@ def game(word, difficulty, player):
     letters_guessed = []
     words_guessed = []
     if difficulty == "1":
-        lives = 9
+        player.lives = 9
     elif difficulty == "2":
-        lives = 7
+        player.lives = 7
     elif difficulty == "3":
-        lives = 5
+        player.lives = 5
     clear_screen()
     print("Time to start guessing!")
     if player.score > 0:
         print(f"Your score is {player.score}")
-    while not guessed_correct and lives > 0:
-        print(hangman(lives))
+    while not guessed_correct and player.lives > 0:
+        print(hangman(player.lives))
         for space in word_hint:
             print(space, end=" ")
         print("")
-        print(f"You have {lives} guesses remaining.")
+        print(f"You have {player.lives} guesses remaining.")
         print(f"The word has {len(word)} letters.")
         print(f"Letters guessed: {letters_guessed}")
         guess = input("Guess a letter or word:\n").upper()
@@ -176,7 +177,7 @@ def game(word, difficulty, player):
             elif guess not in word:
                 clear_screen()
                 print(f"{guess} is not in the word.")
-                lives -= 1
+                player.lives -= 1
                 letters_guessed.append(guess)
             else:
                 clear_screen()
@@ -197,7 +198,7 @@ def game(word, difficulty, player):
             elif guess != word:
                 clear_screen()
                 print(f"{guess} is not the word.")
-                lives -= 1
+                player.lives -= 1
                 words_guessed.append(guess)
             else:
                 guessed_correct = True
@@ -210,7 +211,7 @@ def game(word, difficulty, player):
             print(f"{guess} is not a valid input. Enter a letter or word.")
     if guessed_correct:
         clear_screen()
-        print(hangman(lives))
+        print(hangman(player.lives))
         if difficulty == "1":
             player.score += 1
         elif difficulty == "2":
@@ -220,7 +221,7 @@ def game(word, difficulty, player):
         print(f"Congratulations! The word was {word}.")
     else:
         clear_screen()
-        print(hangman(lives))
+        print(hangman(player.lives))
         if player.score < 1:
             print(f"Out of guesses, the word was {word}.")
         else:
