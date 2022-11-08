@@ -27,6 +27,13 @@ leaderboard = SHEET.worksheet('leaderboard')
 data = leaderboard.get_all_values()
 
 
+class Player:
+    def __init__(self, name, place, score):
+        self.name = name
+        self.place = place
+        self.score = 0
+
+
 def clear_screen():
     """
     Clear function to clean-up the terminal so things don't get messy.
@@ -43,11 +50,11 @@ def player_details():
             while not location:
                 player_place = input("Where are you from?\n")
                 if player_place.isalpha():
-                    print(f"Okay {player_name} from {player_place}, let's go!")
                     player_score = 0
-                    return player_name, player_place, player_score
-                    location = True
-                    break
+                    print(f"Okay {player_name} from {player_place}, let's go!")
+                    player = Player({player_name}, {player_place},
+                                    {player_score})
+                    return player
                 else:
                     clear_screen()
                     print(f"{player_place} is not valid, try again")
@@ -128,7 +135,7 @@ def random_word():
     return word.upper()
 
 
-def game(word, difficulty):
+def game(word, difficulty, player):
     """
     Play game.
     Check if user guess is a letter or word.
@@ -199,7 +206,8 @@ def game(word, difficulty):
     if guessed_correct:
         clear_screen()
         print(hangman(lives))
-        print(f"Congratulations! The word was {word}.")
+        player.score += 1
+        print(f"Congratulations! The word was {word}. Score: {player.score}")
     else:
         clear_screen()
         print(hangman(lives))
@@ -211,12 +219,12 @@ def main():
     Run game.
     Give user the option to restart the game once complete.
     """
-    player_details()
+    player = player_details()
     game_menu()
     while True:
         difficulty = game_difficulty()
         word = random_word()
-        game(word, difficulty)
+        game(word, difficulty, player)
         reset_game = False
         while not reset_game:
             restart = input("Play again? (Y/N)\n")
