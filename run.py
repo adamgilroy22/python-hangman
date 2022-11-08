@@ -206,7 +206,12 @@ def game(word, difficulty, player):
     if guessed_correct:
         clear_screen()
         print(hangman(lives))
-        player.score += 1
+        if difficulty == "1":
+            player.score += 1
+        elif difficulty == "2":
+            player.score += 2
+        elif difficulty == "3":
+            player.score += 3
         print(f"Congratulations! The word was {word}. Score: {player.score}")
     else:
         clear_screen()
