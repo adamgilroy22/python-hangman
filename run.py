@@ -79,7 +79,7 @@ def player_details():
     Prompt player to enter their name and location
     and sets starting score to 0.
     """
-    print("Welcome to Hangman!")
+    print(Fore.CYAN + Style.BRIGHT + "Welcome to Hangman!")
     while True:
         player_name = input("What is your name?\n").upper()
         if player_name.isalpha():
@@ -89,23 +89,22 @@ def player_details():
                 if player_place.isalpha():
                     player = Player(name=player_name, place=player_place,
                                     lives=7, score=0)
-                    print(f"Okay {player.name} from {player.place}, let's go!")
                     return player
                 else:
                     clear_screen()
-                    print(f"{player_place} is not valid, try again")
+                    print(Fore.RED + f"{player_place} is not valid")
         else:
             clear_screen()
-            print(f"{player_name} is not valid, try again")
+            print(Fore.RED + f"{player_name} is not valid")
 
 
-def game_menu():
+def game_menu(player):
     """
     Menu to begin game, view rules or check leaderboard
     """
     while True:
         title()
-        print(f"Welcome {player.name}")
+        print("Welcome " + Fore.CYAN + f"{player.name}")
         print("Press 1 to play game")
         print("Press 2 to view rules")
         print("Press 3 to view leaderboard")
@@ -122,7 +121,7 @@ def game_menu():
             quit()
         else:
             clear_screen()
-            print(f"{selection} is not valid.")
+            print(Fore.RED + Style.BRIGHT + f"{selection} is not valid.")
 
 
 def game_difficulty():
@@ -143,7 +142,7 @@ def game_difficulty():
             return difficulty
         else:
             clear_screen()
-            print(f"{difficulty} is not valid. Please select 1, 2 or 3")
+            print(Fore.RED + Style.BRIGHT + f"{difficulty} is not valid.")
 
 
 def game_rules():
@@ -205,8 +204,7 @@ def game(word, difficulty, player):
     elif difficulty == "3":
         player.lives = 5
     clear_screen()
-    print("Time to start guessing!")
-    print(word)
+    print(Fore.CYAN + Style.BRIGHT + "Time to start guessing!")
     if player.score > 0:
         print(f"Your score is {player.score}")
     while not guessed_correct and player.lives > 0:
@@ -256,7 +254,8 @@ def game(word, difficulty, player):
             print(f"The word is {len(word)} letters long, try again.")
         else:
             clear_screen()
-            print(f"{guess} is not a valid input. Enter a letter or word.")
+            print(Fore.RED + Style.BRIGHT + f"{guess} is not a valid input.")
+            print(Fore.RED + Style.BRIGHT + "Enter a letter or word.")
     if guessed_correct:
         clear_screen()
         print(hangman(player.lives))
@@ -273,10 +272,10 @@ def game(word, difficulty, player):
         clear_screen()
         print(hangman(player.lives))
         if player.score < 1:
-            print(f"Out of guesses, the word was {word}.")
+            print(Fore.RED + Style.BRIGHT + f"You lose, the word was {word}.")
         else:
             player.score -= 1
-            print(f"Out of guesses, the word was {word}.")
+            print(Fore.RED + Style.BRIGHT + f"You lose, the word was {word}.")
 
 
 def main():
@@ -285,7 +284,7 @@ def main():
     Give user the option to restart the game once complete.
     """
     player = player_details()
-    game_menu()
+    game_menu(player)
     while True:
         difficulty = game_difficulty()
         word = random_word()
@@ -304,7 +303,8 @@ def main():
                 quit()
             else:
                 clear_screen()
-                print(f"{restart} is not a valid input. Type Y or N.")
+                print(Fore.RED + Style.BRIGHT + f"{restart} is not valid.")
+                print("Type Y or N.")
 
 
 main()
