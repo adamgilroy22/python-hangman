@@ -212,7 +212,6 @@ def game(word, difficulty, player):
         for space in word_hint:
             print(space, end=" ")
         print("")
-        print(f"You have {player.lives} guesses remaining.")
         print(f"The word has {len(word)} letters.")
         print(f"Letters guessed: {letters_guessed}")
         guess = input("Guess a letter or word:\n").upper()
@@ -272,10 +271,10 @@ def game(word, difficulty, player):
         clear_screen()
         print(hangman(player.lives))
         if player.score < 1:
-            print(Fore.RED + Style.BRIGHT + f"You lose, the word was {word}.")
+            print(Fore.RED + Style.BRIGHT + f"The word was {word}.")
         else:
             player.score -= 1
-            print(Fore.RED + Style.BRIGHT + f"You lose, the word was {word}.")
+            print(Fore.RED + Style.BRIGHT + f"The word was {word}.")
 
 
 def main():
