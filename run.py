@@ -105,6 +105,7 @@ def game_menu():
     """
     while True:
         title()
+        print(f"Welcome {player.name}")
         print("Press 1 to play game")
         print("Press 2 to view rules")
         print("Press 3 to view leaderboard")
@@ -158,7 +159,14 @@ def game_rules():
     and the hangman will get closer to his demise.
     Get the word before your lives are up
     and the hangman will be spared.
-    Can you save the hangman?
+
+    Score points every time you win and try to
+    earn a spot on the leaderboard. Easy, normal, and hard
+    modes earn you 1, 2 and 3 points respectively and
+    an extra point is awarded for long words.
+    If you lose a game, you will also lose a point.
+
+    Can you save the hangman and make the top 10?
         """
     )
     input("Press enter to return to main menu\n")
