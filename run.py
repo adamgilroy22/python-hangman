@@ -87,9 +87,9 @@ def player_details():
             while not location:
                 player_place = input("Where are you from?\n")
                 if player_place.isalpha():
-                    print(f"Okay {player_name} from {player_place}, let's go!")
                     player = Player(name=player_name, place=player_place,
                                     lives=7, score=0)
+                    print(f"Okay {player.name} from {player.place}, let's go!")
                     return player
                 else:
                     clear_screen()
@@ -108,6 +108,7 @@ def game_menu():
         print("Press 1 to play game")
         print("Press 2 to view rules")
         print("Press 3 to view leaderboard")
+        print("Press 4 to quit game")
         selection = input("What would you like to do?\n")
         if selection == "1":
             break
@@ -115,9 +116,12 @@ def game_menu():
             game_rules()
         elif selection == "3":
             display_leaderboard()
+        elif selection == "4":
+            print("Exiting program")
+            quit()
         else:
             clear_screen()
-            print(f"{selection} is not valid. Please select 1, 2 or 3")
+            print(f"{selection} is not valid.")
 
 
 def game_difficulty():
