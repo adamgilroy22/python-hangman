@@ -81,11 +81,11 @@ def player_details():
     """
     print("Welcome to Hangman!")
     while True:
-        player_name = input("What is your name?\n")
+        player_name = input("What is your name?\n").upper()
         if player_name.isalpha():
             location = False
             while not location:
-                player_place = input("Where are you from?\n")
+                player_place = input("Where are you from?\n").upper()
                 if player_place.isalpha():
                     player = Player(name=player_name, place=player_place,
                                     lives=7, score=0)
