@@ -1,31 +1,70 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# __Hangman - Portfolio Project 3__
+This is Python terminal game of Hangman and is deployed on Heroku using Code Institute's mock terminal template.
 
-Welcome Adam Gilroy,
+Users enter their name and location before being brought to the main menu where they can start a game, view the rules or look at the leaderboard. After choosing to start the game they must choose their difficulty and begin guessing letters or words until either the word is found or they run out of lives. The number of lives is determined by what difficulty they choose.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+If the user gets the word correct they gain points depending on their difficulty level and length of the word. Easy gets you 1 point, normal 2 points and hard 3 points. The user is given an additional point if their word is longer than 6 letters. After the game is finished the user is given the choice to either play again or quit the game and the user can play the game as many times as they want with their points adding up after each game. If a user loses a game and their score is more than 1, they will lose 1 point.
 
-## Reminders
+On exit of the game, the user's score is checked against the current leaderboard and if the user is told whether or not they made the top 10.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## __UX & Design__
 
-## Creating the Heroku app
+### __User Stories__
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### __Flowchart__
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### __Colour Scheme__
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## __Features__ 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- __Feature #1__
+    - 
 
-Connect your GitHub repository and deploy as normal.
+### __Features Left to Implement__
+- __Local Leaderboard__
+    - I plan to add local leaderboards so users can see how they compare to other users in their location.
 
-## Constraints
+### __Technologies Used__
+The following is a list of the technologies I used on this project.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+    - The program was written entirely in Python.
+- [Github](https://github.com/)
+    - Github was used to store the project's code after being pushed from Git.
+- [Gitpod](https://gitpod.io/)
+    - Gitpod terminal was used to commit my code using Git and push it to Github.
+- [Git](https://git-scm.com/)
+    - Git was used for version control through the Gitpod terminal.
+- [Techsini](http://techsini.com/multi-mockup/index.php)
+    - Techsini was used to generate mockups for the project.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## __Testing__
 
------
-Happy coding!
+View testing [here.](TESTING.md)
+
+## Deployment
+
+### Local Deployment
+
+In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/adamgilroy22/stick-kick.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adamgilroy22/stick-kick)
+
+## __Credits__
+
+### __Code__
+
+### __Content__
+
+- All website text content was created and written by me.
+
+### __Design__
+
+- Flowchart was made using [Lucidchart.](https://www.lucidchart.com/pages/)
+
+## __Acknowledgements__
+
+I would like to give special thanks to my mentor, [Time Nelson](https://www.linkedin.com/in/travel-tim-nelson/) for his guidance during the development of this project.
