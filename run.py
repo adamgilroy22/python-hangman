@@ -298,6 +298,7 @@ def main():
     Run game.
     Give user the option to restart the game once complete.
     """
+    clear_screen()
     player = player_details()
     game_menu(player)
     while True:
