@@ -313,9 +313,17 @@ def main():
                 print("Starting again")
                 reset_game = True
             elif restart.upper() == "N":
-                print(f"{Fore.GREEN}Thanks for playing {player.name}!")
                 print(f"Final score: {Fore.YELLOW}{player.score}")
                 update_leaderboard(player)
+                print(f"{Fore.YELLOW}TOP 10 LEADERBOARD")
+                col_len = {i: max(map(len, inner))
+                           for i, inner in enumerate(zip(*leaderboard_scores))}
+
+                for inner in leaderboard_scores:
+                    for col, word in enumerate(inner):
+                        print(f"{word:{col_len[col]}}", end=" | ")
+                    print()
+                print(f"{Fore.GREEN}Thanks for playing {player.name}!")
                 quit()
             else:
                 clear_screen()
