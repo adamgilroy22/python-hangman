@@ -38,6 +38,9 @@ I made this flowchart before writing my code to give myself a clear view of what
 - __Local Leaderboard__
     - I plan to add local leaderboards so users can see how they compare to other users in their location.
 
+- __Multiplayer Mode__
+    - I plan to add multiplayer mode where one player types a word for the other player to guess with first to 5 points winning.
+
 ### __Technologies Used__
 The following is a list of the technologies I used on this project.
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
@@ -61,19 +64,26 @@ View testing [here.](TESTING.md)
 
 In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
 
-- `git clone https://github.com/adamgilroy22/stick-kick.git`
+- `git clone https://github.com/adamgilroy22/python-hangman.git`
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adamgilroy22/stick-kick)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adamgilroy22/python-hangman)
 
 ## __Credits__
 
 ### __Code__
 
+- Code to pull random word from words.txt taken from [here](https://www.geeksforgeeks.org/pulling-a-random-word-or-string-from-a-line-in-a-text-file-in-python/)
+- Code to create clear_screen function taken from [here](https://www.geeksforgeeks.org/clear-screen-python/)
+- Code to create Player class learned from [here](https://realpython.com/python3-object-oriented-programming/)
+- Code to update leaderboard taken from [here](https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread) and [here](https://blog.aspose.com/2021/04/13/insert-and-delete-rows-and-columns-in-excel-using-python/)
+- Code to display leaderboard in columns taken from [here](https://stackoverflow.com/questions/61285626/print-list-of-lists-in-neat-columns-table)
+
 ### __Content__
 
-- All website text content was created and written by me.
+- Words.txt content taken from [here](https://github.com/Xethron/Hangman/blob/master/words.txt)
+- Hangman graphics taken from [here](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c)
 
 ### __Design__
 
