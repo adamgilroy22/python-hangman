@@ -12,6 +12,16 @@ On exit of the game, the user's score is checked against the current leaderboard
 ## __UX & Design__
 
 ### __User Stories__
+- As a user, I want to be able to input my name and location and be given feedback if I entered invalid data.
+- As a user, I want to be able to view the rules of the game.
+- As a user, I want to be able to view the current leaderboard.
+- As a user, I want to be able to choose the game's difficulty.
+- As a user, I want to be able to see how many letters I need to guess.
+- As a user, I want to be able to see what letters I've already guessed
+- As a user, I want to be notified if I try to guess a letter or word I've already guessed.
+- As a user, I want a clear picture of how many guesses/lives I have left.
+- As a user, I want to be able to restart the game after the game has finished without exiting the program to do so.
+- As a usre, I want to see if I've made the leaderboard after exiting the game after playing.
 
 ### __Flowchart__
 I made this flowchart before writing my code to give myself a clear view of what needed to be implemented as I wrote the program. It clearly indicates the layout and structure of the program including where the user needs to be asked for input, where the computer much check the input and how to handle invalid inputs, where the program should subtract the user's lives and add to the user's score.
@@ -71,4 +81,4 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 ## __Acknowledgements__
 
-I would like to give special thanks to my mentor, [Time Nelson](https://www.linkedin.com/in/travel-tim-nelson/) for his guidance during the development of this project.
+I would like to give special thanks to my mentor, [Tim Nelson](https://www.linkedin.com/in/travel-tim-nelson/) for his guidance during the development of this project.
