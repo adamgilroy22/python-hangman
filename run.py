@@ -111,7 +111,7 @@ def game_menu(player):
     Menu to begin game, view rules or check leaderboard
     """
     while True:
-        print(f"Welcome {Fore.CYAN}{player.name}!")
+        print(f"Hello, {Fore.CYAN}{Style.BRIGHT}{player.name}!")
         print("Press 1 to play game")
         print("Press 2 to view rules")
         print("Press 3 to view leaderboard")
@@ -128,7 +128,7 @@ def game_menu(player):
             quit()
         else:
             clear_screen()
-            print(f"{Fore.RED}{Style.BRIGHT}{selection} is not valid.")
+            print(f"{Fore.RED}{selection} is not valid.")
 
 
 def game_difficulty():
@@ -137,9 +137,9 @@ def game_difficulty():
     """
     while True:
         print("Select difficulty")
-        print(f"{Fore.GREEN}{Style.BRIGHT}1. Easy - 9 lives")
-        print(f"{Fore.YELLOW}{Style.BRIGHT}2. Normal - 7 lives")
-        print(f"{Fore.RED}{Style.BRIGHT}3. Hard - 5 lives")
+        print(f"{Fore.GREEN}1. Easy - 9 lives")
+        print(f"{Fore.YELLOW}2. Normal - 7 lives")
+        print(f"{Fore.RED}3. Hard - 5 lives")
         difficulty = input()
         if difficulty == "1":
             return difficulty
@@ -149,7 +149,7 @@ def game_difficulty():
             return difficulty
         else:
             clear_screen()
-            print(f"{Fore.RED}{Style.BRIGHT}{difficulty} is not valid.")
+            print(f"{Fore.RED}{difficulty} is not valid.")
 
 
 def game_rules():
@@ -216,27 +216,28 @@ def game(word, difficulty, player):
     clear_screen()
     print(f"{Fore.CYAN}{Style.BRIGHT}Time to start guessing!")
     if player.score > 0:
-        print(f"Your score is {player.score}")
+        print(f"Your score is: {player.score}")
     while not guessed_correct and player.lives > 0:
         print(hangman(player.lives))
         for space in word_hint:
             print(space, end=" ")
         print("")
         print(f"The word has {len(word)} letters.")
-        print(f"Letters guessed: {letters_guessed}")
+        print("Letters guessed: " + ', '.join(letters_guessed))
         guess = input("Guess a letter or word:\n").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in letters_guessed:
                 clear_screen()
-                print(f"You've already guessed {guess}, try again.")
+                print(f"{Fore.YELLOW}You've already guessed {guess}, "
+                      "try again.")
             elif guess not in word:
                 clear_screen()
-                print(f"{guess} is not in the word.")
+                print(f"{Fore.RED}{guess} is not in the word.")
                 player.lives -= 1
                 letters_guessed.append(guess)
             else:
                 clear_screen()
-                print(f"Great, {guess} is in the word!")
+                print(f"{Fore.GREEN}Great, {guess} is in the word!")
                 letters_guessed.append(guess)
                 word_split = list(word_hint)
                 indices = [i for i, letter in enumerate(word)
@@ -249,22 +250,24 @@ def game(word, difficulty, player):
         elif len(guess) == len(word) and guess.isalpha():
             if guess in words_guessed:
                 clear_screen()
-                print(f"You've already guessed {guess}, try again.")
+                print(f"{Fore.YELLOW}You've already guessed {guess},"
+                      "try again.")
             elif guess != word:
                 clear_screen()
-                print(f"{guess} is not the word.")
+                print(f"{Fore.RED}{guess} is not the word.")
                 player.lives -= 1
                 words_guessed.append(guess)
             else:
                 guessed_correct = True
         elif len(guess) > 1 and len(guess) != len(word) and guess.isalpha():
             clear_screen()
-            print(f"{guess} is {len(guess)} letters long.")
-            print(f"The word is {len(word)} letters long, try again.")
+            print(f"{Fore.YELLOW}{guess} is {len(guess)} letters long.")
+            print(f"{Fore.YELLOW}The word is {len(word)} letters long, "
+                  "try again.")
         else:
             clear_screen()
-            print(f"{Fore.RED}{Style.BRIGHT}{guess} is not a valid input.")
-            print(f"{Fore.RED}{Style.BRIGHT}Enter a letter or word.")
+            print(f"{Fore.RED}{guess} is not a valid input.")
+            print(f"{Fore.RED}Enter a letter or word.")
     if guessed_correct:
         clear_screen()
         print(hangman(player.lives))
@@ -281,10 +284,10 @@ def game(word, difficulty, player):
         clear_screen()
         print(hangman(player.lives))
         if player.score < 1:
-            print(f"{Fore.RED}{Style.BRIGHT}The word was {word}.")
+            print(f"{Fore.RED}The word was {word}.")
         else:
             player.score -= 1
-            print(f"{Fore.RED}{Style.BRIGHT}The word was {word}.")
+            print(f"{Fore.RED}The word was {word}.")
 
 
 def main():
@@ -306,13 +309,13 @@ def main():
                 print("Starting again")
                 reset_game = True
             elif restart.upper() == "N":
-                print(f"Thanks for playing {player.name}!")
-                print(f"Final score: {player.score}")
+                print(f"{Fore.GREEN}Thanks for playing {player.name}!")
+                print(f"Final score: {Fore.YELLOW}{player.score}")
                 update_leaderboard(player)
                 quit()
             else:
                 clear_screen()
-                print(f"{Fore.RED}{Style.BRIGHT}{restart} is not valid.")
+                print(f"{Fore.RED}{restart} is not valid.")
                 print("Type Y or N.")
 
 

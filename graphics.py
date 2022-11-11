@@ -17,7 +17,7 @@ def hangman(lives):
     Print hangman stages indexing
     list of stages with lives remaining.
     """
-    hangman_lives = ['''
+    hangman_lives = [f'''
 
 
 
@@ -25,7 +25,7 @@ def hangman(lives):
 
 
   =========
-9 LIVES REMAIN''', '''
+{Fore.GREEN}9 LIVES REMAIN''', f'''
 
         |
         |
@@ -33,7 +33,7 @@ def hangman(lives):
         |
         |
   =========
-8 LIVES REMAIN''', '''
+{Fore.GREEN}8 LIVES REMAIN''', f'''
     +---+
         |
         |
@@ -41,31 +41,31 @@ def hangman(lives):
         |
         |
   =========
-7 LIVES REMAIN''', '''
-    +---+
-    |   |
-        |
-        |
-        |
-        |
-  =========
-6 LIVES REMAIN''', '''
+{Fore.GREEN}7 LIVES REMAIN''', f'''
     +---+
     |   |
-    O   |
+        |
         |
         |
         |
   =========
-5 LIVES REMAIN''', '''
+{Fore.GREEN}6 LIVES REMAIN''', f'''
     +---+
     |   |
     O   |
+        |
+        |
+        |
+  =========
+{Fore.GREEN}5 LIVES REMAIN''', f'''
+    +---+
+    |   |
+    O   |
     |   |
         |
         |
   =========
-4 LIVES REMAIN''', '''
+{Fore.YELLOW}4 LIVES REMAIN''', f'''
     +---+
     |   |
     O   |
@@ -73,7 +73,7 @@ def hangman(lives):
         |
         |
   =========
-3 LIVES REMAIN''', '''
+{Fore.YELLOW}3 LIVES REMAIN''', f'''
     +---+
     |   |
     O   |
@@ -81,7 +81,7 @@ def hangman(lives):
         |
         |
   =========
-2 LIVES REMAIN''', '''
+{Fore.RED}2 LIVES REMAIN''', f'''
     +---+
     |   |
     O   |
@@ -89,7 +89,7 @@ def hangman(lives):
    /    |
         |
   =========
-1 LIFE REMAINS''', '''
+{Fore.RED}1 LIFE REMAINS''', f'''
     +---+
     |   |
     O   |
@@ -97,5 +97,5 @@ def hangman(lives):
    / \\  |
         |
   =========
-  YOU LOSE''']
+  {Fore.RED}YOU LOSE''']
     return hangman_lives[-lives-1]
