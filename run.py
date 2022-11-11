@@ -6,6 +6,7 @@ import os
 import gspread
 from google.oauth2.service_account import Credentials
 import colorama
+import time
 from colorama import Fore, Style
 from graphics import title, hangman
 
@@ -315,6 +316,7 @@ def main():
             elif restart.upper() == "N":
                 print(f"Final score: {Fore.YELLOW}{player.score}")
                 update_leaderboard(player)
+                time.sleep(1.5)
                 print(f"{Fore.YELLOW}TOP 10 LEADERBOARD")
                 col_len = {i: max(map(len, inner))
                            for i, inner in enumerate(zip(*leaderboard_scores))}
