@@ -61,6 +61,7 @@ def display_leaderboard():
         print()
     print()
     input("Press enter to return to main menu\n")
+    clear_screen()
 
 
 class Player:
@@ -111,12 +112,13 @@ def game_menu(player):
     Menu to begin game, view rules or check leaderboard
     """
     while True:
-        print(f"Hello, {Fore.CYAN}{Style.BRIGHT}{player.name}!")
+        print(f"Hello, {Fore.CYAN}{Style.BRIGHT}{player.name}")
+        print("What would you like to do?")
         print("Press 1 to play game")
         print("Press 2 to view rules")
         print("Press 3 to view leaderboard")
         print("Press 4 to quit game")
-        selection = input("What would you like to do?\n")
+        selection = input()
         if selection == "1":
             break
         elif selection == "2":
@@ -124,7 +126,7 @@ def game_menu(player):
         elif selection == "3":
             display_leaderboard()
         elif selection == "4":
-            print("Exiting program")
+            print(f"Goodbye {player.name}!")
             quit()
         else:
             clear_screen()
@@ -179,6 +181,7 @@ def game_rules():
         """
     )
     input("Press enter to return to main menu\n")
+    clear_screen()
 
 
 def random_word():
@@ -284,10 +287,10 @@ def game(word, difficulty, player):
         clear_screen()
         print(hangman(player.lives))
         if player.score < 1:
-            print(f"{Fore.RED}The word was {word}.")
+            print(f"{Fore.RED}Unlucky, the word was {word}.")
         else:
             player.score -= 1
-            print(f"{Fore.RED}The word was {word}.")
+            print(f"{Fore.RED}Unlucky, the word was {word}.")
 
 
 def main():
