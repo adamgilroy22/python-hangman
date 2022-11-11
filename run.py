@@ -35,15 +35,15 @@ def update_leaderboard(player):
     """
     for count, score in enumerate(leaderboard_scores[1:11], 2):
         if player.score > int(score[2]):
-            print(f"Well done {player.name}, you made the top 10 with")
-            print(f"{player.score} points!")
+            print(f"{Fore.GREEN}Well done {player.name}, you made the top 10!")
             player_as_list = [player.name, player.place, player.score]
             leaderboard.append_row(player_as_list)
             leaderboard.sort((3, 'des'), range='A2:C999')
             leaderboard.delete_rows(12)
             break
     else:
-        print(f"Unlucky, {player.name} You didn't make the top 10 this time!")
+        print(f"{Fore.RED}Unlucky {player.name}, You didn't make the top 10 "
+              "this time!")
 
 
 def display_leaderboard():
