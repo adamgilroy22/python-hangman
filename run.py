@@ -50,8 +50,16 @@ def display_leaderboard():
     """
     Print current leaderboard
     """
-    for x in leaderboard_scores:
-        print(*x)
+    clear_screen()
+    print(f"{Fore.YELLOW}TOP 10 LEADERBOARD")
+    col_len = {i: max(map(len, inner))
+               for i, inner in enumerate(zip(*leaderboard_scores))}
+
+    for inner in leaderboard_scores:
+        for col, word in enumerate(inner):
+            print(f"{word:{col_len[col]}}", end=" | ")
+        print()
+    print()
     input("Press enter to return to main menu\n")
 
 
@@ -79,7 +87,7 @@ def player_details():
     Prompt player to enter their name and location
     and sets starting score to 0.
     """
-    print(Fore.CYAN + Style.BRIGHT + "Welcome to Hangman!")
+    title()
     while True:
         player_name = input("What is your name?\n").upper()
         if player_name.isalpha():
@@ -92,10 +100,10 @@ def player_details():
                     return player
                 else:
                     clear_screen()
-                    print(Fore.RED + f"{player_place} is not valid")
+                    print(f"{Fore.RED}{player_place} is not valid")
         else:
             clear_screen()
-            print(Fore.RED + f"{player_name} is not valid")
+            print(f"{Fore.RED}{player_name} is not valid")
 
 
 def game_menu(player):
@@ -103,8 +111,7 @@ def game_menu(player):
     Menu to begin game, view rules or check leaderboard
     """
     while True:
-        title()
-        print("Welcome " + Fore.CYAN + f"{player.name}")
+        print(f"Welcome {Fore.CYAN}{player.name}!")
         print("Press 1 to play game")
         print("Press 2 to view rules")
         print("Press 3 to view leaderboard")
@@ -121,7 +128,7 @@ def game_menu(player):
             quit()
         else:
             clear_screen()
-            print(Fore.RED + Style.BRIGHT + f"{selection} is not valid.")
+            print(f"{Fore.RED}{Style.BRIGHT}{selection} is not valid.")
 
 
 def game_difficulty():
@@ -130,9 +137,9 @@ def game_difficulty():
     """
     while True:
         print("Select difficulty")
-        print(Fore.GREEN + Style.BRIGHT + "1. Easy - 9 lives")
-        print(Fore.YELLOW + Style.BRIGHT + "2. Normal - 7 lives")
-        print(Fore.RED + Style.BRIGHT + "3. Hard - 5 lives")
+        print(f"{Fore.GREEN}{Style.BRIGHT}1. Easy - 9 lives")
+        print(f"{Fore.YELLOW}{Style.BRIGHT}2. Normal - 7 lives")
+        print(f"{Fore.RED}{Style.BRIGHT}3. Hard - 5 lives")
         difficulty = input()
         if difficulty == "1":
             return difficulty
@@ -142,7 +149,7 @@ def game_difficulty():
             return difficulty
         else:
             clear_screen()
-            print(Fore.RED + Style.BRIGHT + f"{difficulty} is not valid.")
+            print(f"{Fore.RED}{Style.BRIGHT}{difficulty} is not valid.")
 
 
 def game_rules():
@@ -151,7 +158,8 @@ def game_rules():
     """
     clear_screen()
     print(
-        """
+        f"""
+   {Fore.YELLOW}+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
     Try to save the hangman by guessing the word.
     Guess either single letters or full words.
     If you guess wrong, you will lose a life
@@ -160,12 +168,14 @@ def game_rules():
     and the hangman will be spared.
 
     Score points every time you win and try to
-    earn a spot on the leaderboard. Easy, normal, and hard
-    modes earn you 1, 2 and 3 points respectively and
-    an extra point is awarded for long words.
-    If you lose a game, you will also lose a point.
+    earn a spot on the leaderboard. Easy, normal,
+    and hard modes earn you 1, 2 and 3 points
+    respectively and an extra point is awarded for
+    long words. If you lose a game, you will also
+    lose a point.
 
     Can you save the hangman and make the top 10?
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
         """
     )
     input("Press enter to return to main menu\n")
@@ -204,7 +214,7 @@ def game(word, difficulty, player):
     elif difficulty == "3":
         player.lives = 5
     clear_screen()
-    print(Fore.CYAN + Style.BRIGHT + "Time to start guessing!")
+    print(f"{Fore.CYAN}{Style.BRIGHT}Time to start guessing!")
     if player.score > 0:
         print(f"Your score is {player.score}")
     while not guessed_correct and player.lives > 0:
@@ -253,8 +263,8 @@ def game(word, difficulty, player):
             print(f"The word is {len(word)} letters long, try again.")
         else:
             clear_screen()
-            print(Fore.RED + Style.BRIGHT + f"{guess} is not a valid input.")
-            print(Fore.RED + Style.BRIGHT + "Enter a letter or word.")
+            print(f"{Fore.RED}{Style.BRIGHT}{guess} is not a valid input.")
+            print(f"{Fore.RED}{Style.BRIGHT}Enter a letter or word.")
     if guessed_correct:
         clear_screen()
         print(hangman(player.lives))
@@ -266,15 +276,15 @@ def game(word, difficulty, player):
             player.score += 3
         if len(word) > 6:
             player.score += 1
-        print(f"Congratulations! The word was {word}.")
+        print(f"{Fore.GREEN}Congratulations! The word was {word}.")
     else:
         clear_screen()
         print(hangman(player.lives))
         if player.score < 1:
-            print(Fore.RED + Style.BRIGHT + f"The word was {word}.")
+            print(f"{Fore.RED}{Style.BRIGHT}The word was {word}.")
         else:
             player.score -= 1
-            print(Fore.RED + Style.BRIGHT + f"The word was {word}.")
+            print(f"{Fore.RED}{Style.BRIGHT}The word was {word}.")
 
 
 def main():
@@ -302,7 +312,7 @@ def main():
                 quit()
             else:
                 clear_screen()
-                print(Fore.RED + Style.BRIGHT + f"{restart} is not valid.")
+                print(f"{Fore.RED}{Style.BRIGHT}{restart} is not valid.")
                 print("Type Y or N.")
 
 
