@@ -112,8 +112,8 @@ def game_menu(player):
     Menu to begin game, view rules or check leaderboard
     """
     while True:
-        print(f"Hello, {Fore.CYAN}{Style.BRIGHT}{player.name}")
-        print("What would you like to do?")
+        print("What would you like to do, "
+              f"{Fore.CYAN}{Style.BRIGHT}{player.name}?")
         print("Press 1 to play game")
         print("Press 2 to view rules")
         print("Press 3 to view leaderboard")

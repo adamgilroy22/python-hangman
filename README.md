@@ -7,11 +7,15 @@ If the user gets the word correct they gain points depending on their difficulty
 
 On exit of the game, the user's score is checked against the current leaderboard and if the user is told whether or not they made the top 10.
 
+[Live link to website](https://python-hangman-adam-gilroy.herokuapp.com/)
+
 ## __UX & Design__
 
 ### __User Stories__
 
 ### __Flowchart__
+I made this flowchart before writing my code to give myself a clear view of what needed to be implemented as I wrote the program. It clearly indicates the layout and structure of the program including where the user needs to be asked for input, where the computer much check the input and how to handle invalid inputs, where the program should subtract the user's lives and add to the user's score.
+![Flowchart](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/flowchart/hangman-flowchart.png)
 
 ### __Colour Scheme__
 
