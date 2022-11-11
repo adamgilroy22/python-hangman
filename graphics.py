@@ -4,7 +4,7 @@ from colorama import Fore, Style
 
 
 def title():
-    game_title = pyfiglet.figlet_format("Hangman", font="big")
+    game_title = pyfiglet.figlet_format("Hangman", font="standard")
     print(Fore.CYAN + Style.BRIGHT + game_title)
 
 
