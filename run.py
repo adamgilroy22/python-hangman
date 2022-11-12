@@ -316,12 +316,13 @@ def main():
             elif restart.upper() == "N":
                 print(f"Final score: {Fore.YELLOW}{player.score}")
                 update_leaderboard(player)
-                time.sleep(1.5)
+                updated_leaderboard = leaderboard.get_all_values()
                 print(f"{Fore.YELLOW}TOP 10 LEADERBOARD")
                 col_len = {i: max(map(len, inner))
-                           for i, inner in enumerate(zip(*leaderboard_scores))}
+                           for i, inner in enumerate
+                           (zip(*updated_leaderboard))}
 
-                for inner in leaderboard_scores:
+                for inner in updated_leaderboard:
                     for col, word in enumerate(inner):
                         print(f"{word:{col_len[col]}}", end=" | ")
                     print()
