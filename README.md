@@ -25,6 +25,7 @@ On exit of the game, the user's score is checked against the current leaderboard
 
 ### __Flowchart__
 I made this flowchart before writing my code to give myself a clear view of what needed to be implemented as I wrote the program. It clearly indicates the layout and structure of the program including where the user needs to be asked for input, where the computer much check the input and how to handle invalid inputs, where the program should subtract the user's lives and add to the user's score.
+
 ![Flowchart](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/flowchart/hangman-flowchart.png)
 
 ### __Colour Scheme__
@@ -34,37 +35,77 @@ I made this flowchart before writing my code to give myself a clear view of what
 - __Welcome Screen__
     - The user is welcomed to the game and prompted to input their name and location.
 
+![Welcome Screen](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/welcome-screen.png)
+
 - __Main Menu__
     - From the main menu, the user can start the game, view the game rules, view the current leaderboard, and exit the game.
+
+![Main Menu](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/main-menu.png)
 
 - __Rules__
     - This displays the rules and scoring system for the game and the user can be easily brought back to the main menu by hitting the enter key.
 
+![Rules](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/rules.png)
+
 - __Leaderboard__
     - This displays the current top 10 leaderboard so the user can see what score they'll need to beat while playing the game.
 
+![Leaderboard](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/leaderboard.png)
+
 - __Difficulty Selection__
     - This allows the user to select the difficulty which sets how many lives they begin the game with and will also award them more points for guessing a word correctly for harder difficulties.
+
+![Difficulty Menu](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/difficulty-menu.png)
 
 - __Hangman Game__
     - This is the main feature of the program. The user is met with a graphic displaying the hangman depending on how many lives they have with the graphic updating as their lives get lower and more of the hangman appearing.
     - The user is promtped with underscores ( _ ) to let them know how many letters are in the word.
     - The user can enter letters or full words of the same number of letters until they either get the word correct or run out of lives.
 
+![Game Start](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/game-start.png)
+
+![Wrong Guess](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/game-wrong-guess.png)
+
+![Right Guess](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/game-right-guess.png)
+
+![Wrong Word Length](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/wrong-word-length.png)
+
 - __Letters Guessed__
     - As the user plays the game, the letters that they have already guessed will be displayed to them so they know which ones they haven't tried yet. If a user enters a letter that they have guessed previously, they will be reminded of this and prompted to try again without losing a life.
 
+![Letters Guessed](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/letters-guessed.png)
+
+![Already Guessed](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/guessed-already.png)
+
 - __Lives Indicator__
-    - As part of the hangman graphic that prints to display how close the user is to losing, the number of guesses they have left is displayed to let them know exactly how many lives they have remaining.
+    - As part of the hangman graphic that prints to display how close the user is to losing, the number of guesses they have left is displayed to let them know exactly how many lives they have remaining. The color also changes from green to yellow to red the closer you get to losing.
+
+![Orange Warning](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/game-orange-warning.png)
+
+![Red Warning](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/game-red-warning.png)
 
 - __Restart Game__
     - Once the game is over and the user has either won or lost, they will be asked if they want to play again. If the user chooses Y, they will be brought back to the difficulty select menu where they can begin a new game and try to add to their existing score. If they choose N, their current score will be checked against the current leaderboard and updated if necessary before ending the game.
 
+![Game Over - Lose](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/game-over-lose.png)
+
+![Game Over - Win](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/game-over-win.png)
+
+![Restart Game](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/restart-game.png)
+
+![New Game](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/restart-game-score.png)
+
 - __Leaderboard Update__
     - When the user decides to stop playing the game, their score will be checked against the current leaderboard. If their score gets them in the top 10 then they will be told and added to the board, if not they will get a message to try again next time. The most up to date version of the leaderboard is then printed for the user to see before the game exits.
 
+![Didn't Make Leaderboard](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/end-game-not-top-10.png)
+
+![Made Leaderboard](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/end-game-top-10.png)
+
 - __Uninterrupted User Experience__
     - At all points during the program, a user is kept in a loop preventing the program from crashing or exiting if the player enters an invalid input. For example if a user was to enter a number instead of a letter when guessing, they will be alerted and looped back to be prompted to guess a letter or word without losing a life in the game. More of this can be seen in the [testing section](TESTING.MD)
+
+![Invalid Input](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/invalid-input.png)
 
 ### __Features Left to Implement__
 - __Local Leaderboard__
