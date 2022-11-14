@@ -1,13 +1,13 @@
 ## __User Stories Testing__
 | User Goal | Requirement met | Image(s) |
 | --------- | --------------- | -------- |
-| As a user, I want to be able to input my name and location and be given feedback if I entered invalid data. | Yes |  |
-| As a user, I want to be able to view the rules of the game. | Yes |  |
-| As a user, I want to be able to view the current leaderboard. | Yes |  |
-| As a user, I want to be able to choose the game's difficulty. | Yes |  |
-| As a user, I want to be able to see how many letters I need to guess. | Yes |  |
-| As a user, I want to be able to see what letters I've already guessed. | Yes |  |
-| As a user, I want to be notified if I try to guess a letter or word I've already guessed. | Yes |  |
-| As a user, I want a clear picture of how many guesses/lives I have left. | Yes |  |
-| As a user, I want to be able to restart the game after the game has finished without exiting the program to do so. | Yes |  |
-| As a user, I want to see if I've made the leaderboard after exiting the game after playing. | Yes |  |
+| As a user, I want to be able to input my name and location and be given feedback if I entered invalid data. | Yes | ![User test 1a](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-1-a.png) ![User test 1b](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-1-b.png) ![User test 1c](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-1-c.png) |
+| As a user, I want to be able to view the rules of the game. | Yes | ![User test 2a](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-2-a.png) ![User test 2b](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-2-b.png) |
+| As a user, I want to be able to view the current leaderboard. | Yes | ![User test 3a](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-3-a.png) ![User test 3b](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-3-b.png) |
+| As a user, I want to be able to choose the game's difficulty. | Yes | ![User test 4a](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-4-a.png) |
+| As a user, I want to be able to see how many letters I need to guess. | Yes | ![User test 5a](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-5-a.png) |
+| As a user, I want to be able to see what letters I've already guessed. | Yes | ![User test 6a](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-6-a.png) |
+| As a user, I want to be notified if I try to guess a letter or word I've already guessed. | Yes | ![User test 7a](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-7-a.png) ![User test 7b](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-7-b.png) |
+| As a user, I want a clear picture of how many guesses/lives I have left. | Yes | ![User test 8a](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-8-a.png) ![User test 8b](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-8-b.png) |
+| As a user, I want to be able to restart the game after the game has finished without exiting the program to do so. | Yes | ![User test 9a](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-9-a.png) ![User test 9b](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-9-b.png) |
+| As a user, I want to see if I've made the leaderboard after exiting the game after playing. | Yes | ![User test 10a](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-10-a.png) ![User test 10b](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/user-story-10-b.png) |
