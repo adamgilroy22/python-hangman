@@ -31,8 +31,40 @@ I made this flowchart before writing my code to give myself a clear view of what
 
 ## __Features__ 
 
-- __Feature #1__
-    - 
+- __Welcome Screen__
+    - The user is welcomed to the game and prompted to input their name and location.
+
+- __Main Menu__
+    - From the main menu, the user can start the game, view the game rules, view the current leaderboard, and exit the game.
+
+- __Rules__
+    - This displays the rules and scoring system for the game and the user can be easily brought back to the main menu by hitting the enter key.
+
+- __Leaderboard__
+    - This displays the current top 10 leaderboard so the user can see what score they'll need to beat while playing the game.
+
+- __Difficulty Selection__
+    - This allows the user to select the difficulty which sets how many lives they begin the game with and will also award them more points for guessing a word correctly for harder difficulties.
+
+- __Hangman Game__
+    - This is the main feature of the program. The user is met with a graphic displaying the hangman depending on how many lives they have with the graphic updating as their lives get lower and more of the hangman appearing.
+    - The user is promtped with underscores ( _ ) to let them know how many letters are in the word.
+    - The user can enter letters or full words of the same number of letters until they either get the word correct or run out of lives.
+
+- __Letters Guessed__
+    - As the user plays the game, the letters that they have already guessed will be displayed to them so they know which ones they haven't tried yet. If a user enters a letter that they have guessed previously, they will be reminded of this and prompted to try again without losing a life.
+
+- __Lives Indicator__
+    - As part of the hangman graphic that prints to display how close the user is to losing, the number of guesses they have left is displayed to let them know exactly how many lives they have remaining.
+
+- __Restart Game__
+    - Once the game is over and the user has either won or lost, they will be asked if they want to play again. If the user chooses Y, they will be brought back to the difficulty select menu where they can begin a new game and try to add to their existing score. If they choose N, their current score will be checked against the current leaderboard and updated if necessary before ending the game.
+
+- __Leaderboard Update__
+    - When the user decides to stop playing the game, their score will be checked against the current leaderboard. If their score gets them in the top 10 then they will be told and added to the board, if not they will get a message to try again next time. The most up to date version of the leaderboard is then printed for the user to see before the game exits.
+
+- __Uninterrupted User Experience__
+    - At all points during the program, a user is kept in a loop preventing the program from crashing or exiting if the player enters an invalid input. For example if a user was to enter a number instead of a letter when guessing, they will be alerted and looped back to be prompted to guess a letter or word without losing a life in the game. More of this can be seen in the [testing section](TESTING.MD)
 
 ### __Features Left to Implement__
 - __Local Leaderboard__
