@@ -29,6 +29,7 @@ I made this flowchart before writing my code to give myself a clear view of what
 ![Flowchart](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/flowchart/hangman-flowchart.png)
 
 ### __Colour Scheme__
+As this program was built for the terminal, there wasn't much in terms of design or colour but I did use [Colorama](https://pypi.org/project/colorama/) to add a bit of colour where I felt was needed within the terminal to make certain parts stand out to the user.
 
 ## __Features__ 
 
@@ -128,17 +129,14 @@ The following is a list of the technologies I used on this project.
     - Techsini was used to generate mockups for the project.
 
 ## __Testing__
-
 View testing [here.](TESTING.md)
 
 ### Bugs
-
 I used GitHub's issues section to track and manage any bugs that I found during the development and testing of my program. I currently have 0 open bugs and a history of the bugs I tackled can be found [here](https://github.com/adamgilroy22/python-hangman/issues?q=is%3Aissue+is%3Aclosed)
 
 ## Deployment
 
 ### Local Deployment
-
 In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
 
 - `git clone https://github.com/adamgilroy22/python-hangman.git`
@@ -150,7 +148,6 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 ## __Credits__
 
 ### __Code__
-
 - Code to pull random word from words.txt taken from [here](https://www.geeksforgeeks.org/pulling-a-random-word-or-string-from-a-line-in-a-text-file-in-python/)
 - Code to create clear_screen function taken from [here](https://www.geeksforgeeks.org/clear-screen-python/)
 - Code to create Player class learned from [here](https://realpython.com/python3-object-oriented-programming/)
@@ -158,12 +155,10 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 - Code to display leaderboard in columns taken from [here](https://stackoverflow.com/questions/61285626/print-list-of-lists-in-neat-columns-table)
 
 ### __Content__
-
 - Words.txt content taken from [here](https://github.com/Xethron/Hangman/blob/master/words.txt)
 - Hangman graphics taken from [here](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c)
 
 ### __Design__
-
 - Flowchart was made using [Lucidchart.](https://www.lucidchart.com/pages/)
 
 ## __Acknowledgements__
