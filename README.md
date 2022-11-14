@@ -131,12 +131,12 @@ The following is a list of the technologies I used on this project.
 ## __Testing__
 View testing [here.](TESTING.md)
 
-### Bugs
+## __Bugs__
 I used GitHub's issues section to track and manage any bugs that I found during the development and testing of my program. I currently have 0 open bugs and a history of the bugs I tackled can be found [here](https://github.com/adamgilroy22/python-hangman/issues?q=is%3Aissue+is%3Aclosed)
 
-## Deployment
+## __Deployment__
 
-### Local Deployment
+### __Local Deployment__
 In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
 
 - `git clone https://github.com/adamgilroy22/python-hangman.git`
