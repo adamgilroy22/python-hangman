@@ -1,5 +1,7 @@
 # __Hangman - Portfolio Project 3__
-This is Python terminal game of Hangman and is deployed on Heroku using Code Institute's mock terminal template.
+![Mockup](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/mockup.png)
+
+This is Python terminal game of [Hangman](https://en.wikipedia.org/wiki/Hangman_(game)) and is deployed on Heroku using Code Institute's mock terminal template.
 
 Users enter their name and location before being brought to the main menu where they can start a game, view the rules or look at the leaderboard. After choosing to start the game they must choose their difficulty and begin guessing letters or words until either the word is found or they run out of lives. The number of lives is determined by what difficulty they choose.
 
@@ -119,6 +121,10 @@ As this program was built for the terminal, there wasn't much in terms of design
 The following is a list of the technologies I used on this project.
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
     - The program was written entirely in Python.
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+    - HTML was used to.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    - The script used to run the Code Institute mock terminal is done with JavaScript.
 - [Github](https://github.com/)
     - Github was used to store the project's code after being pushed from Git.
 - [Gitpod](https://gitpod.io/)
