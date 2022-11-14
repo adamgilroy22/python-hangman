@@ -131,6 +131,10 @@ The following is a list of the technologies I used on this project.
 
 View testing [here.](TESTING.md)
 
+### Bugs
+
+I used GitHub's issues section to track and manage any bugs that I found during the development and testing of my program. I currently have 0 open bugs and a history of the bugs I tackled can be found [here](https://github.com/adamgilroy22/python-hangman/issues?q=is%3Aissue+is%3Aclosed)
+
 ## Deployment
 
 ### Local Deployment
