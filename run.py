@@ -109,7 +109,8 @@ def player_details():
 
 def game_menu(player):
     """
-    Menu to begin game, view rules or check leaderboard
+    Menu to begin game, view rules, check leaderboard
+    or exit game.
     """
     while True:
         print("What would you like to do, "
@@ -201,8 +202,10 @@ def random_word():
 def game(word, difficulty, player):
     """
     Play game.
+    Set user's number of lives based on difficulty.
     Check if user guess is a letter or word.
     Check if guess is in word or is the word.
+    Add points if the user wins.
     Lose life if not.
     Display win/lose message.
     """
