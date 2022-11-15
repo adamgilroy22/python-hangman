@@ -322,6 +322,7 @@ def main():
                 print("Starting again")
                 reset_game = True
             elif restart.upper() == "N":
+                clear_screen()
                 print(f"Final score: {Fore.YELLOW}{player.score}")
                 update_leaderboard(player)
                 updated_leaderboard = leaderboard.get_all_values()
