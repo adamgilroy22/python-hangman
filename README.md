@@ -33,7 +33,7 @@ I made this flowchart before writing my code to give myself a clear view of what
 ### __Data Model__
 I wanted to include an object oriented class in this project so I created a Player class to do so. I used [Real Python](https://realpython.com/python3-object-oriented-programming/) to help me achieve this.
 
-```
+```python
 class Player:
     def __init__(self, name, place, lives, score):
         self.name = name
