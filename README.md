@@ -35,6 +35,18 @@ I included a favicon that I deisgned on [Canva](https://www.canva.com/) to enhan
 
 ![Favicon](https://github.com/adamgilroy22/python-hangman/blob/main/views/favicon/favicon.png)
 
+### __Data Model__
+I wanted to include an object oriented class in this project so I created a Player class to do so. I used [Real Python](https://realpython.com/python3-object-oriented-programming/) to help me achieve this.
+
+```
+class Player:
+    def __init__(self, name, place, lives, score):
+        self.name = name
+        self.place = place
+        self.lives = 7
+        self.score = 0
+```
+
 ### __Colour Scheme__
 As this program was built for the terminal, there wasn't much in terms of design or colour but I did use [Colorama](https://pypi.org/project/colorama/) to add a bit of colour where I felt was needed within the terminal to make certain parts stand out to the user.
 
