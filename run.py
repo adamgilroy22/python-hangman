@@ -302,7 +302,8 @@ def main():
     Give user the option to restart the game once complete.
     If user doesn't want to play again after game is complete
     Compare their score to the leaderboard and let them know if
-    they've made the top ten or not. Display leaderboard before
+    they've made the top ten or not. Set updated_leaderboard to include
+    user if necessary and display leaderboard before
     thanking user and exiting.
     """
     clear_screen()
