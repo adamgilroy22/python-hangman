@@ -125,6 +125,10 @@ The following is a list of the technologies I used on this project.
     - HTML was used to.
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
     - The script used to run the Code Institute mock terminal is done with JavaScript.
+- [Google Sheets](https://www.google.com/sheets/about/)
+    - Google sheets is used to store the leaderboard.
+- [Google Cloud](https://console.cloud.google.com/)
+    - Google cloud was used to enable the APIs needed for this project.
 - [Github](https://github.com/)
     - Github was used to store the project's code after being pushed from Git.
 - [Gitpod](https://gitpod.io/)
@@ -133,6 +137,13 @@ The following is a list of the technologies I used on this project.
     - Git was used for version control through the Gitpod terminal.
 - [Techsini](http://techsini.com/multi-mockup/index.php)
     - Techsini was used to generate mockups for the project.
+
+### __Imported Libraries and Packages__
+- [random](https://docs.python.org/3/library/random.html) was used to select a word for the user to guess from words.txt.
+- [os](https://docs.python.org/3/library/os.html) was used to create the clear_screen function to enhance user experience and reduce clutter on screen.
+- [Colorama](https://pypi.org/project/colorama/) was used to add colour to some aspects of the program to make certain parts stand out.
+- [PyFiglet](https://pypi.org/project/pyfiglet/0.7/) was used to print large text seen on the welcome message when the program starts.
+- [gspread](https://docs.gspread.org/en/v5.7.0/) was used to link the program to Google Sheets to read and update the leaderboard.
 
 ## __Testing__
 View testing [here.](TESTING.md)
@@ -154,15 +165,15 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 ## __Credits__
 
 ### __Code__
-- Code to pull random word from words.txt taken from [here](https://www.geeksforgeeks.org/pulling-a-random-word-or-string-from-a-line-in-a-text-file-in-python/)
-- Code to create clear_screen function taken from [here](https://www.geeksforgeeks.org/clear-screen-python/)
-- Code to create Player class learned from [here](https://realpython.com/python3-object-oriented-programming/)
-- Code to update leaderboard taken from [here](https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread) and [here](https://blog.aspose.com/2021/04/13/insert-and-delete-rows-and-columns-in-excel-using-python/)
-- Code to display leaderboard in columns taken from [here](https://stackoverflow.com/questions/61285626/print-list-of-lists-in-neat-columns-table)
+- Code to pull random word from words.txt taken from [GeeksforGeeks](https://www.geeksforgeeks.org/pulling-a-random-word-or-string-from-a-line-in-a-text-file-in-python/)
+- Code to create clear_screen function taken from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/)
+- Code to create Player class learned from [Real Python](https://realpython.com/python3-object-oriented-programming/)
+- Code to update leaderboard taken from [Stack Overflow](https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread) and [here](https://blog.aspose.com/2021/04/13/insert-and-delete-rows-and-columns-in-excel-using-python/)
+- Code to display leaderboard in columns taken from [Stack Overflow](https://stackoverflow.com/questions/61285626/print-list-of-lists-in-neat-columns-table)
 
 ### __Content__
-- Words.txt content taken from [here](https://github.com/Xethron/Hangman/blob/master/words.txt)
-- Hangman graphics taken from [here](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c)
+- Words.txt content taken from [GitHub](https://github.com/Xethron/Hangman/blob/master/words.txt)
+- Hangman graphics taken from [GitHub](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c)
 
 ### __Design__
 - Flowchart was made using [Lucidchart.](https://www.lucidchart.com/pages/)
