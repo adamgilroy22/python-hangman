@@ -30,11 +30,6 @@ I made this flowchart before writing my code to give myself a clear view of what
 
 ![Flowchart](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/flowchart/hangman-flowchart.png)
 
-### __Favicon__
-I included a favicon that I deisgned on [Canva](https://www.canva.com/) to enhance the user experience.
-
-![Favicon](https://github.com/adamgilroy22/python-hangman/blob/main/views/favicon/favicon.png)
-
 ### __Data Model__
 I wanted to include an object oriented class in this project so I created a Player class to do so. I used [Real Python](https://realpython.com/python3-object-oriented-programming/) to help me achieve this.
 
@@ -46,6 +41,11 @@ class Player:
         self.lives = 7
         self.score = 0
 ```
+
+### __Favicon__
+I included a favicon that I deisgned on [Canva](https://www.canva.com/) to enhance the user experience.
+
+![Favicon](https://github.com/adamgilroy22/python-hangman/blob/main/views/favicon/favicon.png)
 
 ### __Colour Scheme__
 As this program was built for the terminal, there wasn't much in terms of design or colour but I did use [Colorama](https://pypi.org/project/colorama/) to add a bit of colour where I felt was needed within the terminal to make certain parts stand out to the user.
@@ -162,8 +162,8 @@ The following is a list of the technologies I used on this project.
 - [PyFiglet](https://pypi.org/project/pyfiglet/0.7/) was used to print large text seen on the welcome message when the program starts.
 - [gspread](https://docs.gspread.org/en/v5.7.0/) was used to link the program to Google Sheets to read and update the leaderboard.
 
-## __Testing__
-View testing [here.](TESTING.md)
+## __Testing and Validation__
+View testing and Validation [here.](TESTING.md)
 
 ## __Bugs__
 I used GitHub's issues section to track and manage any bugs that I found during the development and testing of my program. I currently have 0 open bugs and a history of the bugs I tackled can be found [here](https://github.com/adamgilroy22/python-hangman/issues?q=is%3Aissue+is%3Aclosed)

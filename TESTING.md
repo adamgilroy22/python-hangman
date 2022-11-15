@@ -1,3 +1,11 @@
+## __Code Validation__
+I validated both my run.py and graphics.py files using [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) and was met with no errors in both files.
+
+| File Validated | Image |
+| -------------- | ----- |
+| [run.py](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/adamgilroy22/python-hangman/main/run.py) | ![run.py validation](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/run-validation.png) |
+| [graphics.py](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/adamgilroy22/python-hangman/main/graphics.py) | ![graphics.py validation](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/graphics-validation.png) |
+
 ## __User Stories Testing__
 | User Goal | Requirement met | Image(s) |
 | --------- | --------------- | -------- |
