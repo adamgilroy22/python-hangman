@@ -9,7 +9,7 @@ If the user gets the word correct they gain points depending on their difficulty
 
 On exit of the game, the user's score is checked against the current leaderboard and the user is told whether or not they made the top 10.
 
-[Live link to website](https://python-hangman-adam-gilroy.herokuapp.com/)
+The live deployed application can be found at [Python Hangman](https://python-hangman-adam-gilroy.herokuapp.com/).
 
 ## __UX & Design__
 
