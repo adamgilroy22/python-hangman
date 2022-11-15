@@ -297,6 +297,10 @@ def main():
     """
     Run game.
     Give user the option to restart the game once complete.
+    If user doesn't want to play again after game is complete
+    Compare their score to the leaderboard and let them know if
+    they've made the top ten or not. Display leaderboard before
+    thanking user and exiting.
     """
     clear_screen()
     player = player_details()
