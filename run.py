@@ -38,7 +38,7 @@ def update_leaderboard(player):
             print(f"{Fore.GREEN}Well done {player.name}, you made the top 10!")
             player_as_list = [player.name, player.place, player.score]
             leaderboard.append_row(player_as_list)
-            leaderboard.sort((3, 'des'), range='A2:C999')
+            leaderboard.sort((2, 'des'), range='A2:C999')
             leaderboard.delete_rows(12)
             break
     else:
@@ -221,6 +221,7 @@ def game(word, difficulty, player):
         player.lives = 5
     clear_screen()
     print(f"{Fore.CYAN}{Style.BRIGHT}Time to start guessing!")
+    print(word)
     if player.score > 0:
         print(f"Your score is: {player.score}")
     while not guessed_correct and player.lives > 0:
