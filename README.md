@@ -7,7 +7,7 @@ Users enter their name and location before being brought to the main menu where 
 
 If the user gets the word correct they gain points depending on their difficulty level and length of the word. Easy gets you 1 point, normal 2 points and hard 3 points. The user is given an additional point if their word is longer than 6 letters. After the game is finished the user is given the choice to either play again or quit the game and the user can play the game as many times as they want with their points adding up after each game. If a user loses a game and their score is more than 1, they will lose 1 point.
 
-On exit of the game, the user's score is checked against the current leaderboard and if the user is told whether or not they made the top 10.
+On exit of the game, the user's score is checked against the current leaderboard and the user is told whether or not they made the top 10.
 
 [Live link to website](https://python-hangman-adam-gilroy.herokuapp.com/)
 
