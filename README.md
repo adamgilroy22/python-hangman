@@ -30,6 +30,11 @@ I made this flowchart before writing my code to give myself a clear view of what
 
 ![Flowchart](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/flowchart/hangman-flowchart.png)
 
+### __Favicon__
+I included a favicon that I deisgned on [Canva](https://www.canva.com/) to enhance the user experience.
+
+![Favicon](https://github.com/adamgilroy22/python-hangman/blob/main/views/favicon/favicon.png)
+
 ### __Colour Scheme__
 As this program was built for the terminal, there wasn't much in terms of design or colour but I did use [Colorama](https://pypi.org/project/colorama/) to add a bit of colour where I felt was needed within the terminal to make certain parts stand out to the user.
 
@@ -213,6 +218,7 @@ The frontend terminal should now be connected and deployed to Heroku.
 
 ### __Design__
 - Flowchart was made using [Lucidchart.](https://www.lucidchart.com/pages/)
+- Favicon was designed with [Canva.](https://www.canva.com/)
 
 ## __Acknowledgements__
 
