@@ -221,7 +221,6 @@ def game(word, difficulty, player):
         player.lives = 5
     clear_screen()
     print(f"{Fore.CYAN}{Style.BRIGHT}Time to start guessing!")
-    print(word)
     if player.score > 0:
         print(f"Your score is: {player.score}")
     while not guessed_correct and player.lives > 0:
