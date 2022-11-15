@@ -58,3 +58,12 @@
 | Play Again Menu | Input "no" | Notify user that this isn't a valid input and loop back | As expected | PASS |
 | Play Again Menu | Input "1" | Notify user that this isn't a valid input and loop back | As expected | PASS |
 | Play Again Menu | Input "Y1" | Notify user that this isn't a valid input and loop back | As expected | PASS |
+
+## __Cross-browser Testing__
+After deploying the program through Heroku, I have tested it on Chrome, Firefox and Edge. The program has loaded perfectly and had no issues running as expected across all browsers.
+
+| Browser | Image |
+| ------- | ----- |
+| Chrome | ![Chrome test](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/chrome.png) |
+| Firefox | ![Firefox test](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/firefox.png) |
+| Edge | ![Edge test](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/edge.png) |
