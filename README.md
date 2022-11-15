@@ -151,6 +151,8 @@ View testing [here.](TESTING.md)
 ## __Bugs__
 I used GitHub's issues section to track and manage any bugs that I found during the development and testing of my program. I currently have 0 open bugs and a history of the bugs I tackled can be found [here](https://github.com/adamgilroy22/python-hangman/issues?q=is%3Aissue+is%3Aclosed)
 
+![Bugs](https://github.com/adamgilroy22/python-hangman/blob/main/documentation/testing/bugs.png)
+
 ## Deployment
 
 Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web browser. This is to improve the accessibility of the project to others.
