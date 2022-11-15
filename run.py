@@ -342,4 +342,5 @@ def main():
                 print("Type Y or N.")
 
 
-main()
+if __name__ == '__main__':
+    main()
