@@ -11,6 +11,8 @@ On exit of the game, the user's score is checked against the current leaderboard
 
 The live deployed application can be found at [Python Hangman](https://python-hangman-adam-gilroy.herokuapp.com/).
 
+Final Grade: Distinction
+
 ## __UX & Design__
 
 ### __User Stories__
